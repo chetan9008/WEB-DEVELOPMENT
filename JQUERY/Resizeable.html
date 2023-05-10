@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+<script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+<script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
+<link rel="stylesheet" href="//code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css">
+
+<head>
+    <title>
+        Resizables
+    </title>
+    <style>
+        #square {
+            width: 200px;
+            height: 200px;
+            background-color: gray;
+            float:left;
+            margin:40px;
+        }
+
+        #square1 {
+            width: 200px;
+            height: 200px;
+            background-color: yellow;
+            float:left;
+            margin:40px;
+        }
+        #square2 {
+            width: 200px;
+            height: 200px;
+            background-color: lightblue;
+            float:left;
+            margin:40px;
+        }
+        #square3 {
+            width: 200px;
+            height: 200px;
+            background-color: lightcoral;
+            float:left;
+            margin:40px;
+        }
+        .ui-resizable-helper { border: 1px dotted gray; }
+        #square4 {
+            width: 200px;
+            height: 200px;
+            background-color: lightseagreen;
+            float:left;
+            margin:40px;
+        }
+        #square5 {
+            width: 200px;
+            height: 200px;
+            background-color: lime;
+            float:left;
+            margin:40px;
+        }
+        #square6 {
+            width: 200px;
+            height: 200px;
+            background-color: lightslategrey;
+            float:left;
+            margin:40px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="square" align="middle">
+        <strong>Some text</strong>
+    </div>
+    <div id="square1" align="middle">
+        <strong>Some text</strong>
+    </div>
+    <div id="square2" align="middle">
+        <strong>Some text</strong>
+    </div>
+    <div id="square3" align="middle">
+        <strong>Some text</strong>
+    </div>
+    <div id="square4" align="middle">
+        <strong>Some text</strong>
+    </div>
+    <div id="square5" align="middle">
+        <strong>Some text</strong>
+    </div>
+    <div id="square6" align="middle">
+        <strong>Some text</strong>
+    </div>
+    <script>
+        $("#square").resizable();
+
+        $("#square1").resizable({
+            grid:50
+        })
+
+        $("#square2").resizable({
+            maxHeight:400,
+            maxWidth:400,
+            minHeight:100,
+            minWidth:100
+        })
+
+        $("#square3").resizable({
+            animate:true
+        })
+
+        $("#square4").resizable({
+            resize:function(event,ui)
+            {
+                if($("#square4").width() > 400)
+                {
+                    alert("This is big enough!");
+                }
+            }
+        })
+
+        $("#square5").resizable({
+            alsoResize:"#square6"
+        })
+        $("#square6").resizable();
+    </script>
+</body>
+
+</html>

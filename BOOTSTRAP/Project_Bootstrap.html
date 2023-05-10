@@ -1,0 +1,186 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/css/bootstrap.min.css"
+        integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+
+    <title>My app</title>
+    <style>
+        #jumbo {
+            background-image: url(Images/high.jpg);
+            background-repeat: no-repeat;
+            background-size: cover;
+            color: white;
+            margin-top: 50px;
+        }
+        body {
+            background-color: white;
+        }
+    </style>
+</head>
+
+<body data-spy="scroll" data-target="#myScrollspy" data-offset="200">
+
+    <nav class="navbar fixed-top navbar-expand-lg navbar-light bg-light" id="myScrollspy">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo01"
+            aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
+            <a class="navbar-brand" href="#">My app</a>
+            <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+                <li>
+                    <a class="nav-link" href="#first">Home</a>
+                </li>
+                <li>
+                    <a class="nav-link" href="#second">About</a>
+                </li>
+                <li>
+                    <a class="nav-link " href="#three">Download the app</a>
+                </li>
+            </ul>
+            <form class="form-inline my-2 my-lg-0">
+                <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                <button class="btn btn-success my-2 my-sm-0" type="submit">Search</button>
+            </form>
+        </div>
+    </nav>
+        
+    <div id="myScrollspy">
+        <div id="first">
+            <div class="jumbotron" id="jumbo">
+                <h1 class="display-2">My Awesome App</h1>
+                <p class="lead">This is why you should download this app!</p>
+                <hr class="my-4">
+                <p>Want to know more.</p>
+                <form class="form-inline" class="row">
+                    <div class="input-group" class="col">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text" id="basic-addon1">@</span>
+                        </div>
+                        <input class="form-control" type="email" placeholder="Email" aria-label="Search">
+                        <button class="btn btn-info" type="submit">Sign Up</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <div id="second">
+            <div class="jumbotron jumbotron-fluid" style="text-align:center;background-color:white">
+                <div class="container">
+                    <h1 class="display-4">Why this app is awesome?</h1>
+                    <p class="lead">Summary,one again,of my app's awesomeness </p>
+                    <div class="row justify-content-around">
+
+                        <div class="card border-primary mb-3" style="max-width: 18rem;" class="col-sm-4">
+                            <img class="card-img-top" src="Images/hick.jpg" alt="Card image cap">
+                            <div class="card-body text-primary">
+
+                                <h5 class="card-title"><span><i class="fa-solid fa-water"
+                                            style="color: #375bc8;"></i></span>
+                                    Blue</h5>
+                                <p class="card-text">Some quick example text to build on the card title and make up the
+                                    bulk
+                                    of
+                                    the
+                                    card's content.</p>
+                            </div>
+                        </div>
+
+                        <div class="card border-success mb-3" style="max-width: 18rem;" class="col-sm-4">
+                            <img class="card-img-top" src="Images/green.jpg" alt="Card image cap" height="215px">
+
+                            <div class="card-body text-success">
+                                <h5 class="card-title"><span><i class="fa-solid fa-tree"
+                                            style="color: #49974a;"></i></span>
+                                    Green</h5>
+                                <p class="card-text">Some quick example text to build on the card title and make up the
+                                    bulk
+                                    of
+                                    the card's content.</p>
+                            </div>
+                        </div>
+
+                        <div class="card border-danger mb-3" style="max-width: 18rem;" class="col-sm-4">
+                            <img class="card-img-top" src="Images/high.jpg" alt="Card image cap" height="215px">
+                            <div class="card-body text-danger">
+                                <h5 class="card-title"><span><i class="fa-solid fa-gopuram"
+                                            style="color: #e86830;"></i></span>
+                                    Orange</h5>
+                                <p class="card-text">Some quick example text to build on the card title and make up the
+                                    bulk
+                                    of
+                                    the card's content.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="three">
+            <div class="jumbotron " id="jumbo3" style="text-align:center;background-color:#f1f1f1;">
+                <div class="container">
+                    <h1 class="display-4">Download the app!</h1>
+                    <p class="lead">Really, why should I download this app? </p>
+                    <a href=""><img src="Images/store.jpg" style="width:300px;height:50px;"
+                            class="rounded mx-auto d-block" class="img-fluid"></a>
+                </div>
+
+                <footer class="text-center text-white" style="background-color: #f1f1f1;">
+
+                    <div class="container pt-4">
+
+                        <section class="mb-4">
+                            <a class="btn btn-link btn-floating btn-lg text-dark m-1" href="#!" role="button"
+                                data-mdb-ripple-color="dark"><i class="fab fa-facebook-f"></i></a>
+
+                            <a class="btn btn-link btn-floating btn-lg text-dark m-1" href="#!" role="button"
+                                data-mdb-ripple-color="dark"><i class="fab fa-twitter"></i></a>
+
+                            <a class="btn btn-link btn-floating btn-lg text-dark m-1" href="#!" role="button"
+                                data-mdb-ripple-color="dark"><i class="fab fa-google"></i></a>
+
+                            <a class="btn btn-link btn-floating btn-lg text-dark m-1" href="#!" role="button"
+                                data-mdb-ripple-color="dark"><i class="fab fa-instagram"></i></a>
+
+                            <a class="btn btn-link btn-floating btn-lg text-dark m-1" href="#!" role="button"
+                                data-mdb-ripple-color="dark"><i class="fab fa-linkedin"></i></a>
+                            <a class="btn btn-link btn-floating btn-lg text-dark m-1" href="#!" role="button"
+                                data-mdb-ripple-color="dark"><i class="fab fa-github"></i></a>
+                        </section>
+                    </div>
+            </div>
+
+            <div class="text-center text-dark p-3" style="background-color: rgba(0, 0, 0, 0.2);margin-top:-30px">
+                © 2020 Copyright:
+                <a class="text-dark" href="https://chetanwebdevelopment.000webhostapp.com/
+                ">chetan.com</a>
+            </div>
+            </footer>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.3/dist/umd/popper.min.js"
+        integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/js/bootstrap.min.js"
+        integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+        crossorigin="anonymous"></script>
+
+    <script>
+        $(function () {
+  $('[data-toggle="tooltip"]').tooltip()
+})
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Styling Text</title>
+        <style type="text/css">
+#bold
+{
+    font-weight: bold;
+}
+#italic
+{
+    font-style: italic;
+}
+.both{
+    font-weight: bold;
+    font-style:italic;
+}
+#underline{
+    text-decoration: underline;
+}
+a{
+    text-decoration: none;
+    color:black;
+    font-weight: bold;
+}
+a:hover{
+    text-decoration:underline;
+    color:green;
+}
+#big{
+    font-size:200%;
+}
+        </style>
+    </head>
+    <body>
+        <p id="bold">This is the some bold text</p>
+        <p id="italic">This is the some italic text</p>
+        <p class="both">This is the some bold and italic text</p>
+        <p id="bold">This is bold.<span id="italic">This is italic</span></p>
+        <p id="underline">This is underline text</p>
+        <a href="">This is the non-underline link</a>
+        <p id="big">This is big text</p>
+    </body>
+</html>
+<!--Usually (links) are underline-->
+<!--To non-underline links we use (text-decoration:none)-->
+<!--For (bold) (font-weight) is used-->
+<!--For (italic) (font-style) is used-->
+<!--For (underline) (text-decoration) is used-->
+<!--For (size) (font-size) is used-->
+<!--For hover effect (hover) is used-->
+<!--Here (a:hover) is pseudo class-->

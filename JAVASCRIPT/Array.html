@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>
+        Array in Javascript
+    </title>
+</head>
+
+<body>
+    <script>
+        var array = new Array(); // one way to declare array in javascript
+        array[0] = "chetan";
+        array[1] = "gourav";
+        array[2] = "shashi";
+        console.log(array); // To print 
+        console.log(array[0]);
+
+        var anotherArray = [];
+        anotherArray[0] = "pizza";
+        anotherArray[1] = "chesse pizza";
+        console.log(anotherArray[1]);
+
+        var tweets = ["hello everyone", "Welcome Back"];
+        tweets.push("There are four types ");
+        console.log(tweets);
+        tweets.splice(0,1); // For editing in array also delete or insert element in array
+        tweets.splice(0,0,"Here is new comment"); // insert element 
+        tweets.splice(0,1,"hello eyeryone");    // replace element by (splice)
+        tweets[3]="The fourth Element";
+        tweets.push("this is pushed Fifth element");
+    </script>
+</body>
+
+</html>

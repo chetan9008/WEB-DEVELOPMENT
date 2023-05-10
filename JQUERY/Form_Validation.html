@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+        <meta name="viewport" content="width=device-width , initial-scale=1.0" >
+    <script src="jquery.min.js"></script>
+    <title>Sign In form</title>
+    <link rel="stylesheet" href="Form_Validation.css">
+</head>
+
+<body>
+    <div id="container">
+        <div id="disclamer">
+            <p>Password must contain 8 letters</p>
+            <p>Password must have one number</p>
+            <p>Password must have one lowercase</p>
+            <p>Password must have one uppercase</p>
+        </div>
+        <div id="Message"></div>
+        <div id="SignInS"></div>
+        <div id="elements">
+            <label for="fname">First Name </label><input type="text" id="fname">
+        </div>
+        <div id="elements">
+            <label for="Lname">Last Name </label><input type="text" id="Lname">
+        </div>
+        <div id="elements">
+            <label for="email">Email </label><input type="text" id="email">
+        </div>
+        <div id="elements">
+            <label for="phoneNo">Phone No </label><input type="text" id="phoneNo">
+        </div>
+        <div id="elements">
+            <label for="password">Password </label><input type="password" id="password">
+        </div>
+        <div id="elements">
+            <label for="confirmP">Confirm </label><input type="password" id="confirmP">
+        </div>
+        <button id="signin">Sign In</button>
+    </div>
+    <script>
+        function isEmail(email) {
+            var regex = /^([a-zA-Z0-9_.+-])+\@(([a-zA-Z0-9-])+\.)+([a-zA-Z0-9]{2,4})+$/;
+            return regex.test(email);
+        }
+        function phone(input_value) {
+            var phone_pattern = /([0-9]{10})|(\([0-9]{3}\)\s+[0-9]{3}\-[0-9]{4})/;
+            return phone_pattern.test(input_value);
+        }
+        $("#signin").click(function () {
+            $("#disclamer").hide();
+            $("#Message").show();
+            var check;
+            var message = "";
+            if (isEmail($("#email").val()) == false) {
+                message += "<br>Invalid Email";
+                $("#Message").html(message);
+            }
+            if (phone($("#phoneNo").val()) == false) {
+                message += "<p>Invalid phone number</p>";
+                $("#Message").html(message);
+            }
+            if ($("#password").val() != $("#confirmP").val()) {
+                message += "<p>Password is not matched</p>";
+                $("#Message").html(message);
+            }
+            var p = "";
+            p = $("#password").val();
+            if ((p.length) < 8) {
+                message += "<p>Password must have 8 letters";
+                $("#Message").html(message);
+            }
+            var numeric = /[0-9]/;
+            if (p.match(numeric) == null) {
+                message += "<p>Password must have one number";
+                $("#Message").html(message);
+            }
+            var lowercase = /[a-z]/;
+            if (p.match(lowercase) == null) {
+                message += "<p>Password must have one lower case";
+                $("#Message").html(message);
+            }
+            var uppercase = /[A-Z]/;
+            if (p.match(uppercase) == null) {
+                message += "<p>Password must have one upper case";
+                $("#Message").html(message);
+            }
+            if (message == "") {
+                $("#SignInS").html("Sign In Sucessfully!");
+                $("#Message").html("");
+                $("#SignInS").show();
+                $("#Message").hide();
+            }
+        })
+    </script>
+</body>
+
+</html>

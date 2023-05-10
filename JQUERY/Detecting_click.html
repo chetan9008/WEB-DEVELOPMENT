@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Detecting click</title>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+        <style>
+            .square
+            {
+                float:left;
+                width:200px;
+                height: 200px;
+                background-color: green;
+                margin:20px;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="circle">
+            
+        </div>
+        <br>
+        <div class="square">
+            
+        </div>
+        <div class="square"></div>
+        <script>
+            function circle()
+            {
+            document.getElementById("circle").style.width = "200px";
+            document.getElementById("circle").style.height = "200px";
+            document.getElementById("circle").style.backgroundColor = "yellow";
+            document.getElementById("circle").style.borderRadius = "50%";
+            document.getElementById("circle").style.float = "left";
+            document.getElementById("circle").style.margin = "20px";
+            }
+            circle();
+
+            $("#circle").click(function() //$ is the string selector
+            {
+                alert("This is a circle"); 
+            })
+            $(".square").click(function()
+            {
+                alert("This is square");
+            })
+            $("div").click(function()
+            {
+                alert("This is the also a div");
+            })
+        </script>
+    </body>
+</html>

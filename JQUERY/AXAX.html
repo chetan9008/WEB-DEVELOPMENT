@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <script src="jquery.min.js"></script>
+    <title>
+        axax
+    </title>
+</head>
+
+<body>
+    <p id="empty"></p>
+    <script>
+        $.ajax("text.txt").done(function(data)
+        {
+            alert("hello");
+        }).fail(function()
+        {
+            alert("fails");
+        })
+    </script>
+</body>
+
+</html>

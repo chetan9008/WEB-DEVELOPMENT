@@ -1,0 +1,14 @@
+body {
+    background-color: #323437;
+    color: #cca618;
+    letter-spacing: 1px;
+    font-family: 'Rajdhani', sans-serif;
+}
+
+#css {
+    font-size: 140%;
+    font-weight: bold;
+}
+#line {
+    font-size:120%;
+}

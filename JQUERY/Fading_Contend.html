@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script src="jquery.min.js"></script>
+        <title>
+            Fading contend
+        </title>
+        <style>
+            #circle
+            {
+                background-color: yellow;
+                width:100px;
+                height: 100px;
+                border-radius:50%;
+            }
+            div{
+                margin:20px;
+            }
+            #square
+            {
+                background-color: blue;
+                width:100px;
+                height: 100px;
+            }
+            #special
+            {
+                background-color: red;
+                width: 100px;
+                height: 100px;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="circle"></div>
+        <div id="square"></div>
+        <hr class="1hr">
+        <hr class="1hr">
+        <div id="special"></div>
+        <p id="specialText">This is special square</p>
+        <hr>
+        <hr>
+        <p id="paragraph">This is some contend</p>
+        <button id="button">click</button>
+        <hr>
+        <hr>
+        <p id="para">This is another some text</p>
+        <button id="another_button">Toggle By another way</button>
+        <hr>
+        <hr>
+        <p id="someText">This is the another some Text</p>
+        <button id="callbackbutton">Toggle By Call back function</button>
+        <script>
+            $("#circle").click(function()
+            {
+                $("#circle").fadeOut("slow"); //This is the jquery function for fade out 
+            })
+
+            $("#square").click(function()
+            {
+                $(this).hide();//we can also disappear contend using hide()
+            })
+
+            $("#special").click(function()
+            {
+                $(this).fadeOut("slow",function() // here is callback function which do after fadeOut 
+                {
+                    $("#specialText").html("The square is removed");  
+                    // $(".1hr").hide();
+                })
+            })
+
+            $("#specialText").click(function()
+            {
+                $("#special").fadeIn(); //fadeIn() fade in the contend
+            })
+
+            $("#button").click(function()
+            {
+                $("#paragraph").fadeToggle();// this is very useful function 
+            })
+
+            $("#another_button").click(function()  // this is another way to toggle fadeInandfadeOut function
+            {
+                if($("#para").css("display") == "none")
+                {
+                    $("#para").fadeIn();
+                    return;
+                }
+                $("#para").fadeOut();
+            })
+
+            let check = true;//this is the another way to toogle 
+            $("#callbackbutton").click(function()//function by use of variable
+            {
+                if(check)
+                {
+                $("#someText").fadeOut(function()
+                {
+                    check = false;
+                });
+                }
+                else
+                {
+                    $("#someText").fadeIn(function()
+                    {
+                        check = true;
+                    });
+                }
+            })
+        </script>
+    </body>
+</html>

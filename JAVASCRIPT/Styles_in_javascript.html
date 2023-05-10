@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Style with Javascript</title>
+
+</head>
+
+<body>
+    <p id="Some_Text">This is a sentence.</p>
+    <button id="button">Style</button>
+
+    <p id="Red">This is a sentence.</p>
+    <button id="RedButton">Style</button>
+
+    <p id="fontSize">This is small text</p>
+    <button id="sizeButton">Increase the size</button>
+
+    <p id="Disappear">This sentece will disappear</p>
+    <button id="Remove">Remove the Sentence</button>
+
+
+    <script>
+        document.getElementById("button").onclick = function () {
+            document.getElementById("Some_Text").style.color = "green";
+        }
+        document.getElementById("RedButton").onclick = function () {
+            document.getElementById("Red").style.color = "red";
+            document.getElementById("Red").innerHTML = "This is red text";
+            alert("This is wrong direction");
+        }
+
+        document.getElementById("sizeButton").onclick = function () {
+            document.getElementById("fontSize").style.fontSize = "250%";
+            document.getElementById("fontSize").innerHTML = "This is big text"
+            document.getElementById("sizeButton").innerHTML = "small text"
+        }
+
+        document.getElementById("Remove").onclick=function()
+        {
+            document.getElementById("Disappear").style.display="none"
+        }
+
+    </script>
+</body>
+
+</html>

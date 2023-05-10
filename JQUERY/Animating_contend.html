@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+    <script src="jquery.min.js"></script>
+    <head>
+        <title>
+            Animating Contend
+        </title>
+        <style>
+            #circle{
+                width: 100px;
+                height: 100px;
+                background-color: yellow;
+                border-radius: 50%;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="circle">
+
+        </div>
+        <script>
+            $("#circle").hover(function()
+            {
+                $("#circle").animate(     //we use animate to more interective pages
+                    {
+                        width:"200px",   //we make array of different properties
+                        height:"200px",
+                        margin:"100px"
+                    },400,
+                    function()     // here is a call back function
+                    {
+                        $("#circle").css("backgroundColor","red");
+                    }
+                )
+            })
+        </script>
+    </body>
+</html>

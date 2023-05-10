@@ -1,0 +1,42 @@
+body{
+    background-image: url(Images/back.jpg);
+    background-repeat: no-repeat;
+    background-size:cover;
+    background-position: center;
+    height: 500px;
+    font-family:"Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+}
+#login{
+    position:relative;
+    top:30px;
+    width:500px;
+    height:450px;
+    margin:0 auto;
+    border-radius:10px;
+    background-color: #182030;
+    padding:30px;
+}
+.text{
+    color:#66fcf1;
+}
+#first-image{
+        display: block;
+        width: 120px;
+        margin:0 auto;
+}       
+.input{
+    width:100%;
+    height: 30px;
+    border:gray 1px solid;
+    background-color: gray;
+    opacity: 80%;
+    }
+#forgot a{
+    color:white;
+}
+#button
+{
+    background-color:#66fcf1;
+    width:100%;
+    height: 40px;
+}

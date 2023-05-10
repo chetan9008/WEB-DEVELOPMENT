@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <script src="jquery.min.js"></script>
+        <script src = "https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+        <title>
+            Changing Website contend
+        </title>
+        <style>
+            #square{
+                width:50px;
+                height: 50px;
+                background-color: red;
+            }
+            #another_square{
+                margin-top:20px;
+                width:50px;
+                height: 50px;
+                background-color: green;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="circle"></div>
+        <div id="square"></div>
+        <div id="another_square"></div>
+        <p id="p">This is some text</p>
+        <p id="another">This is another some text</p>
+        <a href="https://chetanwebdevelopment.000webhostapp.com/" target="_blank" >Chetan's website</a>
+        <br>
+        <br>
+        <iframe src="https://chetanwebdevelopment.000webhostapp.com/" id="iframe"></iframe>
+        <script>
+            if(typeof(jQuery) == undefined )
+            {
+                alert("jquery is not linked");
+            }
+            document.getElementById("circle").style.width= "200px";
+            document.getElementById("circle").style.height = "200px";
+            document.getElementById("circle").style.borderRadius = "50%";
+            document.getElementById("circle").style.backgroundColor = "yellow";
+
+            $("#circle").click(function()
+            {
+                $("#p").html("This text is changed");// changing paragraph with jquery
+            })
+
+            $("#circle").click(function()
+            {
+                alert($("#p").html());//add paragraph with .html
+            })
+
+            $("#circle").hover(function()  //we also use hover to make changes
+            {
+                $("#another").html("Some text");
+            })
+            $("#square").click(function()
+            {
+                $("iframe").attr("src","https://www.ecowebhosting.co.uk/") //and we also change attribute(as we know in html section) by (attr) 
+            })
+            $("#another_square").hover(function()
+            {
+                    $("a").html("Eco webhosting");// changing some another attributes 
+                    $("a").attr("href","https://www.ecowebhosting.co.uk/");
+                    $("a").attr("target","_top");
+            })
+        </script>
+    </body>
+</html>

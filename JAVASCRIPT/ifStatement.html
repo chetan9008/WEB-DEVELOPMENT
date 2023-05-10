@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            If statement
+        </title>
+    </head>
+    <body>
+        <p>Enter the name :</p>
+        <input type="text" id="iname">
+        <p>Enter the password : </p>
+        <input type="password" id="ipassword">
+        <p><button id="login">Log In</button></p>
+        <script>
+            // var x = 8;
+            // if(x==5)
+            // console.log(x);
+            // else
+            // alert("x is not 5");
+
+            document.getElementById("login").onclick=function()
+            {
+            var name;
+            name=document.getElementById("iname").value;
+            var password;
+            password=document.getElementById("ipassword").value;
+
+            if(name=="chetan" && password=="chetan@12")
+            alert("log In successfully");
+            else
+            alert("Please Enter the correct name and password");
+            }   
+    </script>
+    </body>
+</html>

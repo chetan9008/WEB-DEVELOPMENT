@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>
+        CSS Project
+    </title>
+    <style type="text/css">
+        body {
+            font-family: Lucida Sans;
+            margin: 0;
+            padding: 0;
+            letter-spacing: 1px;
+            width:auto;
+        }
+
+        #h{
+            background-color: rgb(4, 170, 109);
+            margin:20px;
+            color:#f1f1f1;          
+            padding:1em;
+            border-radius:10px;  
+        }
+        #heading {
+            font-size:150%;
+            margin-top:-50px;
+        }
+
+        #head {
+            font-size:300%;
+            font-weight: bold;
+        }   
+
+        ul {
+            width: 250px;
+            height: 600px;
+            float: left;
+            margin: 0px 0px 0px -30px;
+        }
+
+        li {
+            list-style-type: none;
+            background-color: #f1f1f1;
+            width: 200px;
+            margin: 10px;
+            border: rgb(208, 204, 204) 0.5px solid;
+            padding: 10px;
+            font-size:120%;
+            height: auto;
+        }
+
+        li:hover {
+            background-color: white;
+        }
+
+        a {
+            text-decoration: none;
+            color: black;
+        }
+
+        a:first {
+            background-color: rgb(4, 170, 109);
+
+        }
+
+        #side {
+            float: right;
+            background-color: #2355de;
+            width: 200px;
+            height: 500px;
+            color: white;
+            margin: 10px 10px 10px 10px;
+            padding: 1em;
+            border-radius: 5px;
+        }
+
+        #sideh {
+            font-size: 200%;
+            font-weight: bold;
+        }
+        #side_para{
+            font-size:120%;
+        }
+        #anotherlink {
+            text-decoration: underline;
+            font-size:150%;
+        }
+        #anotherlink:hover{
+            text-decoration: none;
+        }
+
+        #end {
+            background-color: #f1f1f1;
+            margin: 10px;
+            border: rgb(151, 148, 148) 2px solid;
+            width: auto;
+            padding: 10px;
+            font-size: 100%;
+            color: black;
+            border-radius: 10px;
+        }
+
+        #clear {
+            clear: both;
+        }
+        .para{
+            font-size:150%;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+    <div id="h">
+    <p id="head"> Welcome to My Homepage</p>
+    <p id="heading">Use the menu to select different Stylesheets </p>
+</div>
+    <ul>
+        <a href="CSS_Project_W3school_1.html">
+            <li>Stylesheet 1</li>
+        </a>
+        <a href="CSS_Project_W3school_2.html">
+            <li>Stylesheet 2</li>
+        </a>
+        <a href="CSS_Project_W3school_3.html">
+            <li>Stylesheet 3</li>
+        </a>
+        <a href="CSS_Project_W3school_4.html">
+            <li>Stylesheet 4</li>
+        </a>
+        <a href="CSS_Project_W3school_No.html">
+            <li>No Stylesheet</li>
+        </a>
+    </ul>
+    <div id="side">
+        <p id="sideh">Side-Bar</p>
+        <p id="side_para">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam
+            nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</p>
+    </div>
+    <h1>Same Page Different Stylesheets</h1>
+    <p class="para">This is a demonstration of how different stylesheets can change the layout of your HTML page. You can change the
+        layout of this page by selecting different stylesheets in the menu, or by selecting one of the following links:
+    </p>
+    <!-- <a href="" id="anotherlink">Stylesheet1, Stylesheet2, Stylesheet3, Stylesheet4.</a> -->
+    <a href="CSS_Project_W3school_1.html" id="anotherlink">Stylesheet1,</a>
+    <a href="CSS_Project_W3school_2.html" id="anotherlink"> Stylesheet2,</a>
+    <a href="CSS_Project_W3school_3.html" id="anotherlink"> Stylesheet3,</a>
+    <a href="CSS_Project_W3school_4.html" id="anotherlink"> Stylesheet4.</a>
+    <h2>No Styles</h2>
+    <p class="para">This page uses DIV elements to group different sections of the HTML page. Click here to see how the page looks
+        like with no stylesheet:
+    </p>
+    <a href="CSS_Project_W3school_No.html" id="anotherlink"> No Stylesheet.</a>
+    <div id="clear"></div>
+    <p id="end">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut
+        laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper
+        suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in
+        vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et
+        iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi.
+    </p>
+</div>
+</body>
+
+</html>

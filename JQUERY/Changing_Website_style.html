@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script src="jquery.min.js"></script>
+        <title>
+            Changing website style with jQuery
+        </title>
+        <style>
+            #circle{
+                width:100px;
+                height:100px;
+                background-color: yellow;
+                border-radius: 50%;
+                margin:30px;
+            }
+            .another_circle{
+                width:100px;
+                height: 100px;
+                background-color: red;
+                border-radius:50%;
+                margin:30px;
+                float:left;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="circle">
+        </div>
+
+        <div class="another_circle">
+        </div>
+        <div class="another_circle"></div>
+        <div class="another_circle"></div>
+        <script>
+            // document.getElementById("circle").onclick = function()
+            // {
+            //     alert("Hello World by javascript");
+            //     document.getElementById("circle").style.width = "400px";
+            //     document.getElementById("circle").style.height = "400px";
+            //     document.getElementById("circle").style.backgroundColor= "red";
+            // }
+
+            $("#circle").click(function()
+            {
+                alert("hello world by jquery"); // In this section we learn about the style changed by jquery 
+                $("#circle").css("width","400px");
+                $("#circle").css("height","400px");
+                $("#circle").css("background-color","red");
+                alert($("#circle").css("background-color"));// this return a color of div
+                // $("#circle").css("backgroundColor","red"); //this is also written as
+                alert($("body").css("width"));
+            })
+
+            // $(".another_circle").click(function()
+            // {
+            //    $(".another_circle").css("display","none"); // this disappear all circles
+            // })      
+
+            $(".another_circle").click(function()
+            {
+                $(this).css("display","none");
+                alert("You hover on " + $(this).attr("class")); // this keyword is very useful 
+            })
+        </script>
+    </body>
+</html>

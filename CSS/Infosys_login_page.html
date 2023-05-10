@@ -1,0 +1,36 @@
+<html>
+    <head>
+        <link rel="stylesheet" type="text/css" href="Infosys.css">
+        <title>Log in to infyspringboard</title>
+    </head>
+    <body>
+        <div id="login">
+            <img id="first-image" src="Images/logo.png">
+            <p class="text">Email</p>
+            <p ><input type="text" class="input" id="name"></p>
+            <p class="text">Password</p>
+            <p ><input type="password" class="input" id="password"></p>
+            <p ><input type="checkbox"><span class="text">Remember me</span></p>
+            <p id="forgot"><a href="">Forgot/Reset Password?</a></p>
+            <button  id="button">Log In</button>
+
+            <script type="text/javascript">
+                document.getElementById("button").onclick = function()
+                {
+                    var email = document.getElementById("name").value;
+                    var password = document.getElementById("password").value;
+                    
+                    if(email == "chetankumar70174577@gmail.com" && password == "chetan@12")
+                    alert("log In Successfully");
+
+                    if(email!="chetankumar70174577@gmail.com")
+                    alert("Please Enter correct email");
+
+                    if(password!="chetan@12")
+                    alert("Please Enter correct password")
+
+                }  
+            </script>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+    <!--( arrany_name.length ) is used to find the length of array-->
+    <head>
+        <title>
+            Loops
+        </title>
+    </head>
+    <body>
+        <div id="1"></div>
+        <script>
+            // for(var i=5;i>0;i--)
+            // {
+            //     alert(i);
+            // }
+
+            // var tweets = [];
+            // for(var i=0;i<5;i++)
+            // {
+            //     tweets[i]=i+1;
+            // }
+            // for(var i=0;i<5;i++)
+            // {
+            //     if(i==0)
+            //     alert("Your "+ tweets[i] + "st Tweet" );
+
+            //     if(i==1)
+            //     alert("Your " + tweets[i] + "nd Tweet");
+                
+            //     if(i==2)
+            //     alert("Your " + tweets[i] + "rd Tweet");
+            //     if(i==3)
+            //     alert("Your " + tweets[i] + "th Tweet");
+            //     if(i==4)
+            //     alert("Your " + tweets[i] + "th Tweet");
+            // }
+
+            // var tweets = ["hello Everyone", "Good Morning" , "An apple a day makes happy a day", "Good Night :)" , "Sweet Dreams"]
+
+            // for(var i=0;i<tweets.length;i++)
+            // {
+            //     alert(tweets[i]);
+            // }
+
+            var tweets = new Array();
+            var tweetsHolder = "";
+            tweets[0] =  "Hello Everyone";
+            tweets[1] = "Good Morning";
+            tweets[2] = "Good Night";
+            tweets[3]= "Another Comment";
+
+            for(var i=0;i<tweets.length;i++)
+            {
+                tweetsHolder +=  "<p>" + tweets[i] + "</p>";
+            }
+            document.getElementById("1").innerHTML = tweetsHolder;
+        </script>
+    </body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script src="jquery.min.js"></script>
+        <title>
+            Regular expression
+        </title>
+        
+    </head>
+    <p id="p">neutrinoxgaming is the
+        <br>
+        best channel i 
+        had ever seen in youtube.
+    </p>
+    <body>
+        <script>
+            var exp = /neutrinoxgaming/;     //to define regular expression
+            var string = "neutrinoxgaming";
+            alert(string.match(exp));         // match() function return string when it is mathced correctly otherwise return null
+
+            var exp1 = /neutrinoxgaming/i;   //here i is insensitive modifier which ignore capitilization 
+            var string = "NeutrinoXGaming";
+            alert(string.match(exp1));
+
+            var exp2 = /n/g;            // here g is global modifier 
+            var string = "neutrinoxgaming";
+            alert(string.match(exp2));
+
+            var exp3 = /neutrinoxgaming/m;
+            alert($("#p").html().match(exp3));        
+            </script>
+    </body>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>
+        How many fingers game
+    </title>
+</head>
+
+<body>
+    <h1>Computer! How many fingers am i holding up</h1>
+    <!-- <p><input id="input" type="text"></p> -->
+
+    <p>
+        <select id="input">
+            <option selected>1</option>
+            <option>2</option>
+            <option>3</option>
+            <option>4</option>
+            <option>5</option>
+        </select>
+    </p>
+    <p><button id="button">Guess</button></p>
+    <script>
+        document.getElementById("button").onclick = function () {
+            var choice = document.getElementById("input").value;
+            var got = false; // boolean variable
+            var tries = 0;
+            while (got == false) {
+                var guess = Math.floor(Math.random() * 5) + 1;
+                if (guess == choice) {
+                    got = true;
+                    alert("Got It!" + "It take" + tries + "times");
+                }
+                else
+                    tries++;
+            }
+        }
+    </script>
+</body>
+
+</html>

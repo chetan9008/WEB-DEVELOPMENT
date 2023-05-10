@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <!--( window.location.reload() is used to reload the page)-->
+        <title>
+            Javascript Games(Greater Than)
+        </title>
+    </head>
+    <body> 
+        Is
+        <span id="first_no"></span>
+        >
+        <span id="second_no"></span>
+        <button id="yes">Yes</button>
+        <button id="no">No</button>
+
+        <script>
+            var number1 = Math.floor(Math.random()*10)+1;
+            var number2 = Math.floor(Math.random()*10)+1;
+            if(number1==number2)
+            {
+                number1=number2+1;
+            }
+            document.getElementById("first_no").innerHTML=number1;
+            document.getElementById("second_no").innerHTML=number2;
+            document.getElementById("yes").onclick = function()
+            {
+                if(number1>number2)
+                {
+                    alert("It is correct");
+                    window.location.reload();
+                }
+                else
+                {
+                    alert("It is wrong");
+                }
+            }
+            document.getElementById("no").onclick = function()
+            {
+                if(number1>number2)
+                {
+                    alert("It is wrong");
+                }
+                else
+                {
+                    alert("It is correct");
+                    window.location.reload();
+                }
+            }
+        </script> 
+    </body>
+</html>

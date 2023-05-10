@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>  
+    <head>
+        <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+    <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css">
+        <title>
+            Sortable
+        </title>
+        <style>
+            li
+            {
+                width:300px;
+                height: 20px;
+                background-color: gray;
+                padding:1em;
+                margin:10px;
+                text-align: center;
+            }
+            li:hover
+            {
+                background-color: #cecdcd;
+            }
+            </style>
+    </head>
+    <body>
+        <ul type="none" id="sortable">
+            <li>One</li>
+            <li>Two</li>
+            <li>Three</li>
+            <li>Four</li>
+            <li>Five</li>
+        </ul>
+        <script>
+            $("#sortable").sortable();
+        </script>
+    </body>
+</html>

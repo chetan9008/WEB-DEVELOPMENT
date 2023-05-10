@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            Mini Challenge
+        </title>
+        <style type="text/css">
+            body{
+                margin:0px;
+                padding:0px;
+            }
+            #red{
+                background-color: red;
+
+            }
+            #blue{
+                background-color: blue;
+
+            }
+            #green{
+                background-color: green;
+
+            }
+            .float{
+                float:left;
+                width:350px;
+                height: 350px;
+                border-radius:50%;
+                margin-right:40px;
+            }
+        </style>
+    </head>
+    <body>
+        <p id="red" class="float"></p>
+        <p id="blue"class="float"></p>
+        <p id="green" class="float"></p>
+
+        <script type="text/javascript">
+            document.getElementById("red").onclick=function()
+            {
+                document.getElementById("red").style.display="none";
+            }
+            document.getElementById("blue").onclick=function()
+            {
+                document.getElementById("blue").style.display="none";
+            }
+            document.getElementById("green").onclick=function()
+            {
+                document.getElementById("green").style.display="none";
+            }
+        </script>
+    </body>
+</html>

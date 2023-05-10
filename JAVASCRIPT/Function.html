@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Function in Javascript</title>
+        <style>
+            #input
+            {
+                width:100px;
+            }
+        </style>
+    </head>
+    <body>
+        <p id="para">How many finger you are doing up</p>
+        <p>
+            <select id = "input">
+                <option>0</option>
+                <option>1</option>
+                <option>2</option>
+                <option>3</option>
+                <option>4</option>
+                <option>5</option>
+            </select>
+        </p>
+        <p><button id="button">Guess</button></p>
+        <script>
+        // function alertMe()
+        // {
+        //     alert("Hello There!");
+        // }  
+        // alertMe();
+
+        // function add(a,b)
+        // {
+        //     return a+b;
+        // }
+        // var a=2,b=3;
+        // alert("sum is " + add(a,b));
+
+        document.getElementById("button").onclick = function()
+        {
+            var myInput = document.getElementById("input").value;
+            var noofguess = 0;
+            function check()
+            {
+                while(guess!=myInput)
+                {
+                    var guess = Math.floor(Math.random()*6);
+                    if(guess == myInput)
+                    {
+                    return true;
+                    }
+                    else
+                    {
+                    noofguess ++;
+                    }
+                }                
+            }
+            if(check() == true)
+            {
+                alert("You got it! " + "It takes " + noofguess +".");
+            }
+            
+            
+        }
+
+        </script>
+    </body>
+</html>

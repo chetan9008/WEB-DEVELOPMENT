@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+    <!--Offline way to link jquery ui-->
+    <!-- <script src="jquery.min.js"></script>
+    <script src="jquery-ui/jquery-ui.js"></script>
+    <script src="jquery-ui/jquery-ui.css"></script> -->
+
+    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+    <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css">
+
+    <head>
+        <title>
+            Jquery ui
+        </title>
+        <style type="text/css">
+            #draggable
+            {
+                width:100px;
+                height: 100px;
+                background-color: yellow;
+            }
+        </style>
+    </head>
+    <body>
+        <p id="draggable"></p>
+        <script>
+            $("#draggable").draggable();
+        </script>
+    </body>
+</html>

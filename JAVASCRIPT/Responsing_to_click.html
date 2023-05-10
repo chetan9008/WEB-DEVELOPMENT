@@ -1,0 +1,19 @@
+<html>
+
+<head>
+    <title>Responding to click</title>
+</head>
+
+<body>
+    <p id="change">Hello world</p>
+    <button id="myButton">Click to change the text</button>
+
+    <script type="text/javascript">
+        document.getElementById("myButton").onclick = function () 
+        {
+            document.getElementById("change").innerHTML = "Hello Javascript";
+        }
+    </script>
+</body>
+
+</html>

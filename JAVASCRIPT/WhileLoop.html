@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            While Loop in Javascript
+        </title>
+    </head>
+    <body>
+        <p id="empty"></p>
+        <script>
+            var tweets = ["Good Morning", "Hello Everyone" , "Good Afternoon", "Good Evening"];
+            var i=0;
+            var string = "";
+            // while(i<tweets.length)
+            // {
+            //     alert(tweets[i]);
+            //     i++;
+            // }
+
+            while(i<tweets.length)
+            {
+                string += "<h1>" + tweets[i] + "</h1>";
+                i++;
+            }
+            document.getElementById("empty").innerHTML = string;
+        </script>
+    </body>
+</html>

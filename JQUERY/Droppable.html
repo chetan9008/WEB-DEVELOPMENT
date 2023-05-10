@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+        <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
+        <link rel="stylesheet" href="//code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css">
+        <title>
+            Droppable
+        </title>
+        <style>
+            #small
+            {
+                width:100px;
+                height:100px;
+                background-color: yellow;
+                float :left;
+                margin:50px;
+            }
+            #big
+            {
+                width:200px;
+                height:200px;
+                background-color: green;
+                float :left;
+                margin:50px;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="small"></div>
+        <div id="big"></div>
+        <script>
+            $("#small").draggable();
+            $("#big").droppable(
+                {
+                    drop:function(event,ui)
+                    {
+                        $(this).css("backgroundColor","red");                        
+                    }
+                }
+            );
+        </script>
+    </body>
+</html>

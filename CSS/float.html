@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Float</title>
+</head>
+<style>
+        .first{
+            color:rgba(242, 235, 235, 0.966);
+            background-color: black;
+            font-size: 200%;
+            width: 300px;
+            float:left;
+        }
+        .second{
+            color:black;
+            background-color: yellow;
+            font-size: 200%;
+            width: 300px;
+            float:right;  
+        }
+        .class_float{
+            clear: both;
+        }
+</style>
+
+<body>
+    <div class="first">
+        <p>The float property specifies whether an element should float to the left, right, or not at all.
+            Note: Absolutely positioned elements ignore the float property!
+        </p>
+        
+    </div>
+
+    <p class="second">Note: Elements next to a floating element will flow around it. To avoid this, use the clear property or the clearfix hack (see example at the bottom of this page).</p>
+
+    <h1>Effected by float</h1> 
+    <div class="class_float"></div>     <!--this is used to clear the floating-->
+    <h1>Not Effected by float</h1> 
+</body> 
+
+</html>
+<!--(float) property is used to float any element in left right position-->

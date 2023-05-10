@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Variables</title>
+</head>
+
+<body>
+    <p id="text">This is some text</p>
+    <button id="var">Change text using var</button>
+
+    <p><input type="text" id="input"></p>
+    <button id="inputButton">Input Button</button>
+    <p id="text_input">This is some text</p>
+
+    <script type="text/javascript">
+
+        var x = 5;
+        x = 20 + 10;
+        alert (x);
+
+        var name = "chetan";
+        document.getElementById("var").onclick = function () {
+            document.getElementById("text").innerHTML = name;
+        }
+
+
+        document.getElementById("inputButton").onclick = function () {
+            var inp = "";
+            inp = document.getElementById("input").value;
+            document.getElementById("text_input").innerHTML = inp;
+        }
+         
+        var string ="chetan is practising javascript";
+        console.log(string);
+    </script>
+</body>
+
+</html>

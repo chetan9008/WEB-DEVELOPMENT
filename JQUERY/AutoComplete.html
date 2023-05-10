@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+    <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css">
+        <title>
+            Auto Complete
+        </title>
+    </head>
+    <body>
+        <label for="search">Find any thing</label><input type="text" placeholder="search" id="search">
+        <script>
+            var array = ["one","two","three","four"];
+            $("#search").autocomplete(
+                {
+                    source:array
+                }
+            );
+        </script>
+    </body>
+</html>

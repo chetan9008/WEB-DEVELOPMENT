@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<htm>
+
+    <head>
+        <meta name="viewport" content="width=device-width , initial-scale=1.0" >
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Tilt+Warp&display=swap" rel="stylesheet">
+        <title>
+            Javascript Game
+        </title>
+        <style>
+            body {
+                background-color: #d1b5d6;
+                font-family: 'Tilt Warp', cursive;
+            }
+
+            #centre {
+                background-color: #86229d;
+                color: #f22ba9;
+                font-size: 190%;
+                padding: 1em;
+                margin: 0 auto;
+                width: 600px;
+                height: 230px;
+                position: relative;
+                top: 100px;
+                border-radius: 20px;
+                box-shadow: #86229d 10px;
+            }
+
+            input {
+                width: 400px;
+                height: 30px;
+                background-color: azure;
+                border-radius: 10px;
+                font-size:70%;
+                font-family: 'Tilt Warp', cursive;
+                padding-left:20px;
+            }
+
+            #onclick {
+                width: 100px;
+                height: 40px;
+                font-family: 'Tilt Warp', cursive;
+                border-radius: 20px;
+                font-size: 80%;
+            }
+            @media screen and (max-width:600px)
+            {
+                #centre{
+                    font-size:180%;
+                    width:80%;
+                    height: 100%;
+                    margin-top:-50px;
+                }
+                input{
+                    width:90%;
+                }
+            }
+    
+        </style>
+    </head>
+
+    <body>
+        <div id="centre">
+            <p>Guess How many fingers am I holding up ?</p>
+            <p><input type="text" id="button"></p>
+            <p><button id="onclick">Guess</button></p>
+        </div>
+        <script>
+
+            var condition1 = "Great! You did it";
+            var condition2 = "Nope! You are Wrong";
+            document.getElementById("onclick").onclick = function () {
+                if (document.getElementById("button").value == "") {
+                    alert("Please Enter any number");
+                }
+                else {
+                    var random = (Math.floor(Math.random() * 10) + 1)
+                    var number = document.getElementById("button").value;
+                    if (number == random) {
+                        alert(condition1)
+                    }
+                    else
+                        alert(condition2 + " There were " + random + " fingers ");
+                }
+            }
+        </script>
+    </body>
+</htm>

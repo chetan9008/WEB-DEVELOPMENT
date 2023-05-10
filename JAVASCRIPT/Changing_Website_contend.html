@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>
+        Changing contend with Javascript
+    </title>
+</head>
+
+<body>
+    <p id="para">Javascript is very powerful language</p>
+    <button id="button">Click me!</button>
+    <p id="para2">Javascript is </p>
+    <button id="Append">Append Text</button>
+
+    <p id="para3">Javascript is </p>
+    <button id="Append1">Some more Append Text</button>
+
+    <p id="empty"></p>
+
+    <p><button id="button1">Obtain Some text</button></p>
+
+
+    <script type="text/javascript">
+        document.getElementById("button").onclick = function () {
+            document.getElementById("para").innerHTML = "chetan is not here"
+
+
+        }
+        document.getElementById("Append").onclick = function () {
+            document.getElementById("para2").innerHTML = document.getElementById("para2").innerHTML + "very powerful language"
+        }
+
+        document.getElementById("Append1").onclick = function () {
+            document.getElementById("para3").innerHTML = "I think " + document.getElementById("para3").innerHTML + "very powerful language"
+        }
+
+        document.getElementById("button1").onclick = function () {
+            document.getElementById("empty").innerHTML = "<h1>There is some text</h1>"
+        }
+    </script>
+</body>
+
+</html>
+
+<!--In this i see that how to append some text with anothe text-->
+
+<!--And i also learnt that we use html inside the string quotes-->
+
+<!--
+And also I accept the challenge of putting some text
+except replacing it
+-->
