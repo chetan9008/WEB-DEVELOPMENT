@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<p>There are some new features of html 5</p>
+<p>1. placeholder</p>
+<p>2. autofocus</p>
+<p>3. autocomplete="off" for security</p>
+<p>4. autocomplete by using (list="datalist-id") attribute and give data to datalist using id</p>
+<p>5. email</p>
+<p>6. required attribute for detecting empty input </p>
+<p>7. pattern="[0-9]" attribute work like regular expression </p>
+<p>8. multiple attribute for select multiple files</p>
+<p>9. form id="something" used by input tag by specifying formmethod="post"</p>
+<p>10.form action="file_or_website-name"</p>
+<head>
+    <title>
+        Form in html 5
+    </title>
+</head>
+
+<body>
+    <form id="myform" method="post" action="https://chetanprojects.000webhostapp.com/">
+        <p>Placeholder: <input type="text" placeholder="enter some text"></p>
+        <p>Autofocus: <input type="text" autofocus></p>
+        <p>Autocomplete off: <input type="text" autocomplete="off" </p>
+        <p>Required: <input type="text" required></p>
+        <p>Email: <input type="email"></p>
+        <p>Pattern: <input type="text" pattern="[0-100]"></p>
+        <datalist id="country">
+            <select>
+                <option>India</option>
+                <option>Autralia</option>
+                <option>Canada</option>
+                <option>Pakistan</option>
+
+            </select>
+        </datalist>
+        <p>Select country:
+            <select>
+                <option>India</option>
+                <option>Autralia</option>
+                <option>Canada</option>
+                <option>Pakistan</option>
+
+            </select>
+        </p>
+        <p>Autocomplet: <input type="text" list="country"></p>
+        <p><input type="file" multiple></p>
+        <p><input type="submit" formmethod="post"></p>
+    </form>
+    <form>
+        <p>Outside the form: <input type="text" form="myform"></p>
+    </form>
+</body>
+
+</html>

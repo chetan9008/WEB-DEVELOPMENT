@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>
+        Audio and Video
+    </title>
+    <style>
+        #audio
+        {
+            width:1000px;
+        }
+        #v
+        {
+            height: 200px;
+            width: 300px;
+        }
+    </style>
+</head>
+
+<body>
+    <p>we don't have to specify source tag we can use second method
+    </p>
+    <video controls id="video">
+        <source src="video.mp4" type="video/mp4">
+        Please update your Browser!
+    </video>
+    <p>
+    <button id="play">Play</button>
+    </p>
+    //second video type
+    <p>
+        <video src="video.mp4" id="v" autoplay loop></video>
+    </p>
+    <p>
+        <audio src="audio2.mp3" type="audio/mp3" controls id="audio">Please Updrade your browser</audio>
+    </p>
+    <p>
+        <button id="a">Play</button>
+    </p>
+    <script>
+        let play = false;
+        document.getElementById("play").onclick = function () {
+            if (play == true) {
+                play = false;
+                document.getElementById("video").pause();
+                this.innerHTML = "Play";
+            }
+            else {
+                play = true;
+                document.getElementById("video").play();
+                this.innerHTML = "Pause";
+            }
+        }
+        //rob percival code
+        document.getElementById("a").onclick = function () {
+            if (document.getElementById("audio").paused) {
+                document.getElementById("audio").play();
+                this.innerHTML = "Pause";
+            }
+            else {
+                document.getElementById("audio").pause();
+                this.innerHTML = "Play";
+            }
+        }
+       </script>
+</body>
+
+</html>

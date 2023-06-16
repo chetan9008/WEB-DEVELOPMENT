@@ -1,0 +1,81 @@
+<html>
+
+<head>
+    <title>
+        Canvas in HTML
+    </title>
+    <style>
+        body {
+            width: 800px;
+            margin: 0 auto;
+        }
+
+        #picture {
+            margin-top: 30px;
+            border: 2px solid grey;
+        }
+    </style>
+</head>
+
+<body>
+    <canvas width="700" height="400" id="picture">
+    </canvas>
+    <script>
+        let canvas = document.getElementById("picture");
+        let context = canvas.getContext('2d');
+        let gradient = context.createLinearGradient(260,100,460,300);
+        //first and second argument for x and y coordinates of initial point
+        // third and fourth argument for x and y coordinates of last point
+        gradient.addColorStop(0,"blue");
+        // first arument for offset
+        // second argument for color 
+        gradient.addColorStop(1,"green");
+        context.fillStyle = gradient;
+        context.fillRect(260,100,200,200);//first argument for x-axis(width) and
+        //second for y-axis(height)
+        //third for length
+        //forth for breadth
+        context.strokeStyle="red";
+        context.moveTo(260,100);
+        //first argument for x coordinate and second for y coordinate
+        context.lineTo(460,300);
+        //first argument for x coordinate and second for y coordinate
+        context.stroke();
+        // stroke for line
+        context.moveTo(460,100);
+        context.lineTo(260,300);
+        context.stroke();
+        //for circle
+        context.beginPath();
+        context.arc(150,100,50,0,Math.PI*1/2);
+        // first and second argument for x and y coordinate 
+        // third for radius
+        // forth and fifth for inital to final angle which is radian
+        context.stroke();
+        context.beginPath();
+        context.arc(150,300,50,Math.PI*1/2,Math.PI);
+        context.stroke();
+        context.beginPath();
+        context.arc(560,120,50,Math.PI,2*Math.PI*3/4);
+        context.stroke();
+        context.beginPath();
+        context.arc(560,320,50,Math.PI*3/2,2*Math.PI)
+        context.stroke();
+
+        context.fillStyle= "black";
+        context.font = "20px Arial";
+        //first string for height of text
+        context.fillText("My Canvas",300,50);
+        // second and third for coordinate in x and y 
+        // here x for width 
+        // and y for heigth;
+        gradient = context.createLinearGradient(300,50,350,60);
+        gradient.addColorStop(0,"red");
+        gradient.addColorStop(1,"green");
+        context.fillStyle = gradient;
+        context.font = "20px Arial";
+        context.fillText("Gradient Color",290,80);
+</script>
+</body>
+
+</html>

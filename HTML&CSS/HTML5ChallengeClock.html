@@ -1,0 +1,106 @@
+<html>
+
+<head>
+    <title>
+        Clock
+    </title>
+    <style>
+        body {
+            width: 500px;
+            margin: 0 auto;
+            background-image: url(space.jpg);
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+        #canvas
+        {
+            margin-top:20px;
+        }
+    </style>
+</head>
+
+<body>
+    <canvas id="canvas" width="500px" height="500px">
+    </canvas>
+    <script>
+        function clock() 
+        {
+            let canvas = document.getElementById("canvas");
+            let context = canvas.getContext('2d');
+            let radius = canvas.width / 2;
+            function makeCircle(context, radius) 
+            {
+                //big circle
+                context.fillStyle = "rgb(12,31,47)";
+                context.beginPath();
+                context.arc(radius, radius, radius, 0, 2 * Math.PI);
+                context.fill();
+            }
+            function makeMiddleCircle(context, radius) 
+            {
+                //small circle
+                context.fillStyle = "white";
+                context.beginPath();
+                context.arc(radius, radius, radius / 40, 0, 2 * Math.PI);
+                context.fill();
+            }
+            function addNumbers(context, radius) 
+            {
+                //numbers
+                context.textAlign = "centre";
+                context.textBaseline = "middle";
+                context.fillStyle = "white";
+                context.font = radius / 10 + "px Arial";
+                for (let i = 1; i < 13; i++) 
+                {
+                    context.fillText(i, radius + radius * .9 * Math.sin(i * 2 * Math.PI / 12), radius - (radius * .9 * Math.cos(i * 2 * Math.PI / 12)));
+                }
+            }
+            function findCurrentTime(context, radius) 
+            {
+                //for time
+                let date = new Date();
+                let hours = date.getHours();
+                let minutes = date.getMinutes();
+                let seconds = date.getSeconds();
+                hours = hours % 12 + minutes / 60 + seconds / 3600;
+                findAngle(hours, minutes, seconds, context, radius);
+            }
+            function findAngle(hours, minutes, seconds, context, radius) 
+            {
+                // for angle
+                let hoursAngle = hours * 2 * Math.PI / 12;
+                let minuteAngle = minutes * 2 * Math.PI / 60;
+                let secondAngle = seconds * 2 * Math.PI / 60;
+                runClock(hoursAngle, minuteAngle, secondAngle, context, radius);
+            }
+            function runClock(hoursAngle, minuteAngle, secondAngle, context, radius) 
+            {
+                //for hours
+                context.strokeStyle = "white";
+                context.lineWidth = "5";
+                context.moveTo(radius, radius);
+                context.lineTo(radius + radius * .7 * Math.sin(hoursAngle), radius - radius * .7 * Math.cos(hoursAngle));
+                context.stroke();
+                //for minute
+                context.lineWidth = "3";
+                context.moveTo(radius, radius);
+                context.lineTo(radius + radius * .8 * Math.sin(minuteAngle), radius - radius * .8 * Math.cos(minuteAngle));
+                context.stroke();
+                //for seconds
+                context.lineWidth = "2";
+                context.moveTo(radius, radius);
+                context.lineTo(radius + radius * .9 * Math.sin(secondAngle), radius - radius * .9 * Math.cos(secondAngle));
+                context.stroke();
+            }
+            makeCircle(context, radius);
+            makeMiddleCircle(context, radius);
+            addNumbers(context, radius);
+            findCurrentTime(context, radius);
+        }
+        setInterval(clock, 1000);//for setting time every seconds
+
+    </script>
+</body>
+
+</html>
