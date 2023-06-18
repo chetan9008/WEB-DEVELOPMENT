@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>
+        Advance Selector
+    </title>
+    <style>
+        div p {
+            color: red;
+        }
+
+        h1~p {
+            color: blue;
+        }
+        h1+p
+        {
+            color:green;
+        }
+        a[target]
+        {
+            color:rgb(213, 213, 0);
+        }
+        a[href="https://www.google.com/"]
+        {
+            color:aqua;
+        }
+        a[href*="google"]
+        {
+            color:springgreen;
+        }
+        h1[id^="chetan"]
+        {
+            font-style: italic;
+        }
+        h1[id$="Cs"]
+        {
+            text-decoration: underline;
+        }
+        p[id~="div"]
+        {
+            text-decoration: underline;
+        }
+        a[id|="blank"]
+        {
+            font-size:200%;
+        }
+    </style>
+</head>
+<!--
+            div p //select p tage in div 
+            {
+            color: red;
+            }
+            h1~p //select p if h1 have in a div
+            {
+            color:blue;
+            }
+            h1+p //select p which adjacent to h1
+            {
+            color:green;
+            }
+
+
+            *= for select any where 
+            ^= for begin with
+            $= for end with
+            ~= for value between two spaces
+            |= for value separated by hyphone(-)
+    -->
+
+<body>
+    <div>
+        <h1 id="chetanbscCs">This is heading</h1>
+        <p id="container div">This is paragraph</p>
+        <a href="" target="_blank" id="blank-link">This is a link</a>
+    </div>
+    <h1>This is outside heading</h1>
+    <p>This is outside paragraph</p>
+    <a href="https://www.google.com/" > This is without target attribute link</a>
+    <script>
+
+    </script>
+</body>
+
+</html>

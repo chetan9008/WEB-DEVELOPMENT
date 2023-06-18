@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            HTML 5 Cool Features
+        </title>
+        <script>
+            document.createElement("container");
+        </script>
+        <style>
+            img
+            {
+                width:600px;
+                height: 400px;
+            }
+        </style>
+    </head>
+    <body>
+
+        <header>This is header tag</header>
+        <nav>This is nav tag</nav>
+        <menu>This is menu tag</menu>
+        <article>This is article tag</article>
+        <section>This is section tag</section>
+        <footer>This is footer tag</footer>
+        <container>This is container tag</container>
+        <figure>
+            <img src="space.jpg" alt="background-image" data-description="space" id="sky">
+            <figcaption><mark>Star In Sky</mark><small>(Google.com)</small></figcaption>
+        </figure>
+        <form>
+            <p><input type="range" min="100" max="1000" step="100" id="range"></p>
+        </form>
+        <div contenteditable="true">
+            <p>this is some text</p>
+            <ol reversed>
+                <li>Milk</li>
+                <li>Chesse</li>
+            </ol>
+        </div>
+        <br>
+        <script>
+            let text = document.getElementById("sky").getAttribute("data-description");
+            document.write("Value of image : "+ text);
+            document.getElementById("range").oninput = function()
+            {
+                document.write("<p>"+this.value+"</p>");
+            }
+        </script>
+    </body>
+</html>

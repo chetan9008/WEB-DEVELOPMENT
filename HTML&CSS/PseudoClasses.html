@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>
+        Pseudo Classes
+    </title>
+    <style>
+        a:hover {
+            font-size: 200%;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        input[type="text"]:focus {
+            width: 600px;
+            height: 50px;
+            color: red;
+        }
+        /* when user type the changes occur */
+
+
+        /* input:enabled  same as focus
+            {
+            } */
+        input:disabled {
+            width: 600px;
+            background-color: lightskyblue;
+        }
+        /* Changes occur when input tag with disabled attribute */
+        input:checked {
+            width: 70px;
+            height: 70px;
+        }
+
+        p:first-child {
+            color: red;
+        }
+        /* select first element of div and body */
+        p:last-child {
+            color: green;
+        }
+        /* select last element of div and body */
+        p:only-child {
+            color: orange;
+        }
+        /* select only element in body or div */
+        p:first-of-type {
+            text-decoration: underline;
+        }
+        /* select first element of this type */
+        h1:last-of-type {
+            color: violet;
+        }
+        /* similary only-of-type  */
+        tr:nth-child(even)
+        {
+            background-color: aqua;
+        }
+        /* select nth element of div  */
+        tr:nth-child(2n-1)
+        {
+            background-color: yellow;
+        }
+        /* 
+        2n for  even and 2n-1 for odd 
+        we can also use even and odd 
+        */
+        p:nth-last-child(2)
+        {
+            font-size:200%;
+        }
+        /* select 2nd last element  */
+        input:empty
+        {
+            background-color: rgb(184, 184, 184);
+        }
+
+        p:not(.green)
+        {
+            font-weight: bold;
+        }
+        /* select which have not .green class  */
+        p::first-letter
+        {
+            font-size:200%;
+        }
+        /* similary first-line  */
+        a::after
+        {
+            font-size:80%;
+            content:"("attr(href)")";
+        }
+        /* append at the last of link  */
+        a::before
+        {
+            font-size:80%;
+            content:"(link)";
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <a href="form.html" target="_blank">This is a link</a>
+        <p><input type="text" placeholder="input some text"></p>
+        <p><input type="text" disabled placeholder="disabled input"></p>
+        <p><input type="checkbox">Check me</p>
+    </div>
+    <div>
+        <p class="green">
+            This is first child
+            This is first child
+            This is first child
+            This is first child
+        </p>
+        <p>This is second child</p>
+        <p>This is third child</p>
+    </div>
+    <div>
+        <h1>This is first heading</h1>
+        <p>This is second paragraph</p>
+    </div>
+    <div>
+        <p>I am only child of my HÃ¥kon Wium Lie</p>
+    </div>
+    <div>
+        <h1 id="chetanbscCs">This is heading</h1>
+        <p id="container div">This is paragraph</p>
+        <a href="" target="_blank" id="blank-link">This is a link</a>
+    </div>
+    <div>
+        <table style="margin-left:200px;">
+            <tr>
+                <td>Maggie</td>
+            </tr>
+            <tr>
+                <td>Yippee</td>
+            </tr>
+            <tr>
+                <td>Patanjali</td>
+            </tr>
+            <tr>
+                <td>Chinese</td>
+            </tr>
+        </table>
+    </div>
+    <p>This is outside para</p>
+</body>
+
+</html>
