@@ -1,0 +1,390 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/css/bootstrap.min.css"
+        integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="ProjecGeeksForGeeksCSS.css">
+
+    <title>Graph Vs Tree</title>
+</head>
+
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Courses
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="#">Action</a>
+                        <a class="dropdown-item" href="#">Another action</a>
+                    </div>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Tutorials
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="#">Action</a>
+                        <a class="dropdown-item" href="#">Another action</a>
+                    </div>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Jobs
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="#">Action</a>
+                        <a class="dropdown-item" href="#">Another action</a>
+                    </div>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Practise
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="#">Action</a>
+                        <a class="dropdown-item" href="#">Another action</a>
+                    </div>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Contensts
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="#">Action</a>
+                        <a class="dropdown-item" href="#">Another action</a>
+                    </div>
+                </li>
+                <li class="nav-item dropdown" id="logo">
+                    <a class="navbar-brand" href="#">
+                        <img src="https://media.geeksforgeeks.org/gfg-gg-logo.svg" width="30" height="30"
+                            class="d-inline-block align-top" alt="" id="logo-image">
+                    </a>
+                </li>
+
+            </ul>
+            <form class="form-inline my-2 my-lg-0">
+                <div class="nav-item " id="font-awesome-logo">
+                    <i class="fa-solid fa-magnifying-glass fa-xl" style="color: #ffffff;"></i>
+                </div>
+                <div class="nav-item " id="font-awesome-logo">
+                    <i class="fa-sharp fa-solid fa-sun fa-xl" style="color: #ffffff;"></i>
+                </div>
+                <div class="nav-item " id="font-awesome-logo">
+                    <i class="fa-solid fa-language fa-xl" style="color: #ffffff;"></i>
+                </div>
+                <div class="nav-item " id="font-awesome-logo">
+                    <button class="btn btn-dark my-2 my-sm-0" type="submit" id="button-sign">Sign In</button>
+                </div>
+                <!-- <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search"> -->
+            </form>
+        </div>
+    </nav>
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-3">
+            </div>
+            <div class="col-sm-6">
+                <h2>Difference between graph and tree</h2>
+
+                <div class="container">
+                    <div class="row">
+                        <div class="col-sm">
+                            <ul class="nav">
+                                <li class="nav-item">
+                                    <img src="https://media.geeksforgeeks.org/auth/avatar.png" id="unknown-face">
+                                </li>
+                                <li class="nav-item">
+                                    <p id="author">romin_vaghani</p>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="col-sm" id="phone">
+                            <ul class="nav justify-content-end">
+                                <li class="nav-item" id="icon">
+                                    <i class="fa-solid fa-thumbs-up"></i>
+                                </li>
+                                <li class="nav-item" id="icon">
+                                    <i class="fa-solid fa-bookmark"></i>
+                                </li>
+                                <li class="nav-item" id="icon">
+                                    <i class="fa-solid fa-pen"></i>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <nav>
+                    <div class="nav nav-tabs" id="nav-tab" role="tablist">
+                        <a class="nav-item nav-link active" id="nav-home-tab" data-toggle="tab" href="#nav-home"
+                            role="tab" aria-controls="nav-home" aria-selected="true">Read</a>
+                        <a class="nav-item nav-link" id="nav-profile-tab" data-toggle="tab" href="#nav-profile"
+                            role="tab" aria-controls="nav-profile" aria-selected="false">Discuss</a>
+                        <a class="nav-item nav-link" id="nav-contact-tab" data-toggle="tab" href="#nav-contact"
+                            role="tab" aria-controls="nav-contact" aria-selected="false">Courses</a>
+                        <a class="nav-item nav-link" id="nav-practise-tab" data-toggle="tab" href="#nav-contact"
+                            role="tab" aria-controls="nav-contact" aria-selected="false">Courses</a>
+
+                    </div>
+                </nav>
+                <div class="tab-content" id="nav-tabContent">
+                    <div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">
+                        <p><a id="read-link">Graph</a> :</p>
+                        <p>A <a id="read-link">graph </a>is a collection of two sets V and E where V is a finite
+                            non-empty set of vertices and E is a finite non-empty set of edges.</p>
+                        <ul>
+                            <li>Vertices are nothing but the nodes in the graph.</li>
+                            <li>Two adjacent vertices are joined by edges.</li>
+                            <li>Any graph is denoted as G = {V, E}.</li>
+                        </ul>
+                        <p>For Example:</p>
+                        <p><img src="https://media.geeksforgeeks.org/wp-content/cdn-uploads/undirectedgraph.png"></p>
+                        <p>G = {{V1, V2, V3, V4, V5, V6}, {E1, E2, E3, E4, E5, E6, E7}} </p>
+                        <p>A graph is a collection of vertices (also known as nodes) and edges that connect these
+                            vertices. Each edge represents a relationship or connection between two vertices. </p>
+                        <p>Graphs can be directed or undirected, meaning that edges have a specific direction or they do
+                            not. </p>
+                        <p>A directed graph is also known as a digraph. Graphs can also have weighted edges, where each
+                            edge has a weight or cost associated with it. Graphs can be represented in various ways,
+                            such as adjacency matrix or adjacency list.</p>
+                        <p><a id="read-link">Tree</a> : </p>
+                        <p>A tree is a special type of graph that is connected and acyclic, meaning that there are no
+                            cycles in the graph.</p>
+                        <p> In a tree, there is a unique path between any two vertices, and there is a single vertex
+                            called the root that is used as the starting point for traversing the tree. </p>
+                        <p>Trees can be used to model hierarchical relationships, such as the structure of a file system
+                            or the organization of a company.</p>
+                        <p>Trees can be binary or non-binary. In a binary tree, each node has at most two children,
+                            while in a non-binary tree, each node can have any number of children. </p>
+                        <p>Binary trees can be used to solve problems such as searching and sorting, as well as to
+                            represent expressions and parse trees.</p>
+                        <p>A tree is a finite set of one or more nodes such that –</p>
+                        <ol>
+                            <li>There is a specially designated node called root.</li>
+                            <li>The remaining nodes are partitioned into n>=0 disjoint sets T1, T2, T3, …, Tn <br>
+                                where T1, T2, T3, …, Tn are called the subtrees of the root.</li>
+                        </ol>
+                        <p>The concept of a tree is represented by following Fig.</p>
+                        <p><img src="https://media.geeksforgeeks.org/wp-content/cdn-uploads/binary-tree-to-DLL.png"></p>
+                        <p>Graph vs Tree</p>
+                        <table class="table table-bordered table-dark">
+                            <thead>
+                                <tr>
+                                    <th scope="col">The basis of Comparison</th>
+                                    <th scope="col">Graph</th>
+                                    <th scope="col">Tree</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <th scope="row">Definition</th>
+                                    <td>Graph is a non-linear data structure.</td>
+                                    <td>Tree is a non-linear data structure.</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">Structure</th>
+                                    <td>It is a collection of vertices/nodes and edges.</td>
+                                    <td>It is a collection of nodes and edges.</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">Structure cycle</th>
+                                    <td>A graph can be connected or disconnected, can have cycles or loops, and does not
+                                        necessarily have a root node.</td>
+                                    <td>A tree is a type of graph that is connected, acyclic (meaning it has no cycles
+                                        or loops), and has a single root node. </td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">Edges</th>
+                                    <td>Each node can have any number of edges.</td>
+                                    <td>If there is n nodes then there would be n-1 number of edges</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">Types of Edges</th>
+                                    <td>They can be directed or undirected</td>
+                                    <td>They are always directed</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">Root node</th>
+                                    <td>There is no unique node called root in graph.</td>
+                                    <td>There is a unique node called root(parent) node in trees.</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">Traversal</th>
+                                    <td>For graph traversal, we use <a id="read-link">Breadth-First Search (BFS)</a>,
+                                        and <a id="read-link">Depth-First Search (DFS)</a>.</td>
+                                    <td>We traverse a tree using <a id="read-link">in-order, pre-order, or
+                                            post-order</a> traversal methods.</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <p>Last Updated : 28 Feb, 2023
+                            <span id="read-icon">
+                                <i class="fa-solid fa-thumbs-up"></i>
+                            </span>
+                            <span id="read-icon">
+                                <i class="fa-solid fa-bookmark"></i>
+                            </span>
+                        </p>
+                    </div>
+                    <div class="tab-pane fade" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab">...
+                    </div>
+                    <div class="tab-pane fade" id="nav-contact" role="tabpanel" aria-labelledby="nav-contact-tab">...
+                    </div>
+                    <div class="tab-pane fade" id="nav-practise" role="tabpanel" aria-labelledby="nav-practise-tab">...
+                    </div>
+                </div>
+                <h4>Related Topics</h4>
+                <ol>
+                    <li>
+                        <p id="hover-list">
+                            Mathematical and Geometric Algorithms - Data Structure and Algorithm Tutorials
+                        </p>
+                    </li>
+                    <hr>
+                    <li>
+                        <p id="hover-list">
+                            Learn Data Structures with Javascript | DSA Tutorial
+                        </p>
+                    </li>
+                    <hr>
+                    <li>
+                        <p id="hover-list">Introduction to Max-Heap – Data Structure and Algorithm Tutorials</p>
+                    </li>
+                    <hr>
+                    <li>
+                        <p id="hover-list">Introduction to Set – Data Structure and Algorithm Tutorials</p>
+                    </li>
+                    <hr>
+                    <li>
+                        <p id="hover-list">Introduction to Map – Data Structure and Algorithm Tutorials</p>
+                    </li>
+                    <hr>
+                </ol>
+                <div class="container" id="container">
+                    <div class="row">
+                        <div class="col-sm" id="border-right">
+                            <p>Previous</p>
+                            <p>Transpose Graph</p>
+                        </div>
+                        <div class="col-sm">
+                            <p id="next">Next</p>
+                            <p id="next">Breadth First Search or BFS for a Graph</p>
+                        </div>
+                    </div>
+                </div>
+                <br>
+                <h4>Article Contributed By :</h4>
+
+            </div>
+            <div class="col-sm-3">
+            </div>
+        </div>
+    </div>
+
+    <footer class="row row-cols-5 py-5 my-5 border-top">
+        <div class="col-sm">
+            <a href="/" class="d-flex align-items-center mb-3 link-dark text-decoration-none">
+                <img src="https://media.geeksforgeeks.org/auth-dashboard-uploads/gfgFooterLogoDark.png">
+                <svg class="bi me-2" width="40" height="32">
+                    <use xlink:href="#bootstrap" />
+                </svg>
+            </a>
+            <a href="/" class="d-flex align-items-center mb-3 link-dark text-decoration-none" id="footer-link">
+                <i class="fa-solid fa-location-dot fa-lg" id="main-fotter"></i>
+                <p>A-143, 9th Floor, Sovereign Corporate Tower, Sector-136, Noida, Uttar Pradesh - 201305</p>
+                <svg class="bi me-2" width="40" height="32">
+                    <use xlink:href="#bootstrap" />
+                </svg>
+            </a>
+            <a href="/" class="d-flex align-items-center mb-3 link-dark text-decoration-none" id="footer-link">
+                <i class="fa-solid fa-envelope fa-lg" id="main-fotter"></i>
+                <p>feedback@geeksforgeeks.org</p>
+                <svg class="bi me-2" width="40" height="32">
+                    <use xlink:href="#bootstrap" />
+                </svg>
+            </a>
+            <a href="/" class="d-flex align-items-center mb-3 link-dark text-decoration-none" id="footer-link">
+                <i class="fa-brands fa-facebook fa-lg" id="icon-footer"></i>
+                <i class="fa-brands fa-instagram fa-lg" id="icon-footer"></i>
+                <i class="fa-brands fa-linkedin fa-lg" id="icon-footer"></i>
+                <i class="fa-brands fa-twitter fa-lg" id="icon-footer"></i>
+                <i class="fa-brands fa-youtube fa-lg" id="icon-footer"></i>
+                <svg class="bi me-2" width="40" height="32">
+                    <use xlink:href="#bootstrap" />
+                </svg>
+            </a>
+            <a href="/" class="d-flex align-items-center mb-3 link-dark text-decoration-none" id="footer-link">
+                <img src="https://media.geeksforgeeks.org/auth-dashboard-uploads/googleplay-%281%29.png" id="icon-footer">
+                <img src="https://media.geeksforgeeks.org/auth-dashboard-uploads/appstore-%281%29.png" id="icon-footer">
+                <svg class="bi me-2" width="40" height="32">
+                    <use xlink:href="#bootstrap" />
+                </svg>
+            </a>
+        </div>
+
+
+        <div class="col-sm">
+            <h5>Section</h5>
+            <ul class="nav flex-column">
+                <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Home</a></li>
+                <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Features</a></li>
+                <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Pricing</a></li>
+                <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">FAQs</a></li>
+                <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">About</a></li>
+            </ul>
+        </div>
+
+        <div class="col-sm">
+            <h5>Section</h5>
+            <ul class="nav flex-column">
+                <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Home</a></li>
+                <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Features</a></li>
+                <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Pricing</a></li>
+                <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">FAQs</a></li>
+                <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">About</a></li>
+            </ul>
+        </div>
+
+        <div class="col-sm">
+            <h5>Section</h5>
+            <ul class="nav flex-column">
+                <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Home</a></li>
+                <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Features</a></li>
+                <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Pricing</a></li>
+                <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">FAQs</a></li>
+                <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">About</a></li>
+            </ul>
+        </div>
+    </footer>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.3/dist/umd/popper.min.js"
+        integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/js/bootstrap.min.js"
+        integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+        crossorigin="anonymous"></script>
+    <script type="text/javascript" src="ProjectGeeksForGeeks.js"></script>
+</body>
+
+</html>
