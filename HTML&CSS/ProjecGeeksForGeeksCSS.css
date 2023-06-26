@@ -1,0 +1,136 @@
+body {
+    color: white;
+    background-color: black;
+}
+
+#logo {
+    margin-left: 90px;
+}
+
+#logo-image {
+    width: 40px;
+    height: 40px;
+}
+
+#font-awesome-logo {
+    margin-left: 30px;
+}
+
+#button-sign {
+    background-color: grey;
+}
+
+#unknown-face {
+    width: 40px;
+    height: 40px;
+}
+
+#icon {
+    margin-right: 10px;
+}
+
+#author {
+    margin-top: 10px;
+    margin-left: 10px;
+}
+@media (max-width: 700px) {
+ #phone{
+    margin-top:-40px;
+}
+}
+#nav-home-tab
+{
+    color:green;
+}
+
+#nav-home-tab:hover
+{
+    border: none;
+}
+#nav-profile-tab
+{
+    color:green;
+}
+#nav-profile-tab:hover
+{
+    border: none;
+}
+#nav-contact-tab
+{
+    color:green;
+}
+
+#nav-contact-tab:hover
+{
+    border: none;
+}
+#nav-practise-tab
+{
+    color:green;
+}
+
+#nav-practise-tab:hover
+{
+    border:none;
+}
+#read-link
+{
+    color:green;
+    text-decoration: underline;
+}
+#read-icon
+{
+    float:right;
+    margin-left:20px;
+}
+hr{
+    height: 1px;
+    background-color: white;
+    border: none;
+    position:relative;
+    right:20px;
+}
+#hover-list:hover
+{
+    color:green;
+    text-decoration: underline;
+}
+#hover-list
+{
+    margin-left:20px;
+}
+#next
+{
+    float:right;
+}
+#border-right
+{
+    border-right: 1px solid gray;
+}
+#next
+{
+    float:right;
+}
+#container
+{
+    border-bottom: 1px solid gray;
+}
+#footer-link
+{
+    color:white;
+}
+
+#footer-link:hover
+{
+    text-decoration: none;
+}
+#icon-footer
+{
+    margin-left:20px;
+}
+#main-fotter
+{
+    color:green;
+    margin-right: 20px;
+    margin-top:-20px;
+}
