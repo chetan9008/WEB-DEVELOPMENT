@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>
+        Gradient
+    </title>
+    <style>
+        #Gradient {
+            width: 500px;
+            height: 200px;
+            background: linear-gradient(to left, blue, violet, white);
+            /* we can also use this  */
+            /* background:linear-gradient(to bottom right,white,blue);
+                background:linear-gradient(to bottom left,white,blue);
+                background:linear-gradient(to top right,white,blue);
+                background:linear-gradient(to top left,white,blue);
+                background:linear-gradient(to right,white,blue); */
+        }
+
+        #radialGradient {
+            width: 500px;
+            height: 200px;
+            background: radial-gradient(white, green);
+        }
+
+        #challenge {
+            width: 500px;
+            height: 200px;
+            background: linear-gradient(to top right, yellow, green);
+        }
+
+        #simple-shadow {
+            font-size: 200%;
+            text-shadow: 3px 3px 4px gray;
+            /* first for right 
+            second for bottom 
+            third for blur  */
+        }
+
+        #complex-shadow {
+            background-color: gray;
+            text-shadow: 3px 3px 4px grey, -3px -3px 5px rgb(235, 233, 233);
+            /* next first for left 
+            next second for top 
+            next third for blur */
+        }
+
+        #box {
+            width: 300px;
+            height: 300px;
+            background-color: white;
+            margin-left: 20px;
+            box-shadow: 6px 6px 4px grey, -6px -6px 6px rgb(211, 209, 209);
+        }
+
+        
+    </style>
+</head>
+
+<body>
+    <h2 id="simple-shadow">This is shadow text demo</h2>
+    <h1 id="complex-shadow">This is shadow text demo</h1>
+    <div id="box"></div>
+    <div id="Gradient">
+        <h1>This is a heading</h1>
+    </div>
+    <div id="radialGradient">
+        <h1>This is radial Heading</h1>
+    </div>
+    <div id="challenge">
+        <h1>This is radial Heading</h1>
+    </div>
+</body>
+
+</html>
