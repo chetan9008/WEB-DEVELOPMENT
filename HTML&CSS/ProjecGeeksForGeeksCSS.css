@@ -134,3 +134,71 @@ hr{
     margin-right: 20px;
     margin-top:-20px;
 }
+#unknown-face1
+{
+    width:80px;
+    height:80px;
+}
+#author-title
+{
+    margin-top:-50px;
+    margin-left:34px;
+    color:gray;
+}
+#follow
+{
+    background-color: green;
+    border-radius: 20px;
+}
+#follow-button
+{
+    margin-left:70px;
+}
+#author2
+{
+    color: green;
+    font-weight: bold;
+}
+#green
+{
+    color:green;
+}
+#button-end-first
+{
+    background-color: rgb(34, 34, 34);
+    border-radius:10px;
+    margin-top:10px;
+}
+#button-end
+{
+    background-color: rgb(34, 34, 34);
+    border-radius:10px;
+    margin-left:10px;
+    margin-top:10px;
+}
+#button-end:hover
+{
+    background-color: green;
+}
+#button-end-first:hover
+{
+    background-color: green;
+}
+#white
+{
+    color:white;
+    margin-left:5px;
+}
+#improved
+{
+    margin-top:40px;
+    margin-left:-10px;
+}
+#improved-second
+{
+    margin-top:10px;
+    margin-left:-10px;
+}
+  
+  
+  

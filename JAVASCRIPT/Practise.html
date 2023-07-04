@@ -5,64 +5,27 @@
     <meta charset="utf-2" />
     <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-   
+
     <title>
         Practise in js
     </title>
     <style>
-        body{
-            margin:0;
-            padding:0;
-            margin:0 auto;
-            width: 200px;
-            height:200px;
-            background-color: purple;
-            background-repeat: no-repeat;
-            background-size: cover;
-            font-family:'Courier New', Courier, monospace;
-        }
-        div
-        {
-            background:linear-gradient(to right top,rgb(255, 145, 163),purple);
-            height:200px;
-            width: 200px;
-            display:flex;
-            align-items: center;
-            justify-content: center;
-            margin-top:150px;
-            font-size:40px;
-            font-weight: bold;
-            border-radius: 20px;
-            box-shadow: 8px 8px 2px pink;
-        }
+        
     </style>
 </head>
 
 <body>
-    <div>
-    <span id="hour"></span>
-    :
-    <span id="minutes"></span>
-    :
-    <span id="seconds"></span>
-    </div>
     <script>
-        function time()
+        let alphabet = 'e';
+        if(alphabet == 'e'||alphabet=='a'||alphabet=='i'||alphabet=='o'||alphabet=='u')
         {
-            let date = new Date();
-            let d = date.getDate();
-            let hour = date.getHours();
-            let minutes = date.getMinutes();
-            let seconds = date.getSeconds();
-            hour += (minutes/60)+(seconds/3600);
-            hour = Math.floor(hour%12);
-            document.getElementById("hour").innerHTML = hour;
-            document.getElementById("minutes").innerHTML = minutes;
-            document.getElementById("seconds").innerHTML = seconds;
+            document.write(alphabet + " is an aphabet ");
         }
-        time();
-        setInterval(time,1000);
-</script>
+        else
+        {
+            document.write(alphabet + " is constant ");
+        }
+    </script>
 </body>
 
 </html>
