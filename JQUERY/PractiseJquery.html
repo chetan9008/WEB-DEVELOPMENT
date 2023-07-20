@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <script src="jquery.min.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nav</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+        }
+
+        #first,
+        #second,
+        #third {
+            background-color: green;
+            color: #fff;
+            padding: .4rem;
+            border-radius: 5px;
+            height: 2rem;
+            border: 1px solid #ddd;
+            display: grid;
+            justify-content: center;
+            align-items: center;
+        }
+
+        #first:hover,
+        #second:hover,
+        #third:hover {
+            opacity: .8;
+        }
+
+        #first-content {
+            display: block;
+        }
+
+        #second-content,
+        #third-content {
+            display: none;
+        }
+
+        .red {
+            background: linear-gradient(red, orange);
+            width: 100%;
+            height: 33rem;
+        }
+
+        .blue {
+            background: linear-gradient(blue, #3cf1f5);
+            width: 100%;
+            height: 33rem;
+        }
+
+        .purple {
+            background: linear-gradient(rgb(152, 2, 152), violet);
+            width: 100%;
+            height: 33rem;
+        }
+        .mediaQueryButton
+        {
+            display: none;
+        }
+        
+        @media (max-width:960px) {
+        .mediaQueryButton
+        {
+            display: block;
+            cursor: pointer;
+        }
+        .container
+        {
+            display: none;
+        }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="mediaQueryButton">
+        <h1>Menu</h1>
+    </div>
+    <div class="container">
+        <div id="first" class="number">
+            First
+        </div>
+        <div id="second" class="number">
+            Second
+        </div>
+        <div id="third" class="number">
+            Third
+        </div>
+    </div>
+    <div id="first-content" class="content">
+        <div class="red"></div>
+    </div>
+    <div id="second-content" class="content">
+        <div class="blue"></div>
+    </div>
+    <div id="third-content" class="content">
+        <div class="purple"></div>
+    </div>
+    <script>
+        $(".number").click(function () {
+            var id = "#" + this.id + "-content";
+            $(".content").css("display", "none");
+            $(id).css("display", "block");
+        })
+        $(".mediaQueryButton").click(function()
+        {
+            // $(".container").toggleClass("container-show");
+            $(".container").toggle();
+        })
+        const width = $("body").css("width");
+        
+</script>
+</body>
+
+</html>
