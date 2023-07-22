@@ -13,3 +13,21 @@ AOS.init({
     anchorPlacement: 'top-bottom', // defines which position of the element regarding to window should trigger the animation
 
 });
+
+
+function toggleNavbar() {
+    const icon = document.getElementById("toggler-icon");
+    const navbar = document.querySelector(".navbar");
+
+    // Toggle the "open" class on the navbar to change its appearance
+    navbar.classList.toggle("open");
+
+    // Check if the navbar is open and change the icon accordingly
+    if (navbar.classList.contains("open")) {
+        icon.classList.remove("fa-bars");
+        icon.classList.add("fa-times");
+    } else {
+        icon.classList.remove("fa-times");
+        icon.classList.add("fa-bars");
+    }
+}
