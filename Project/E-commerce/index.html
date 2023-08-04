@@ -1,0 +1,485 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no">
+    <title> Home - Organic Store</title>
+    <link rel="icon" href="images/logo_upper.png" type="image/icon type">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light px-4">
+        <a class="navbar-brand" href="#"><img src="images/logo.png" alt="logo" class="img-fluid"></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation" onclick="toggleSidebar()">
+            <i class="fa-solid fa-bars"></i>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="#">Everything</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="#">Groceries</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="#">Juice</a>
+                </li>
+            </ul>
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item "><a class="nav-link active" href="#">About</a></li>
+                <li class="nav-item "><a class="nav-link active" href="#">Contact</a></li>
+                <li class="nav-item nav-link custom-icon"><a href="#">&#8377;&nbsp;0.00</a></li>
+                <li class="nav-item nav-link custom-icon"><a href="#"><i class="fa-solid fa-basket-shopping"></i></a>
+                </li>
+                <li class="nav-item "><a class="nav-link active" href="#"><i class="fa-solid fa-user"></i></a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Sidebar -->
+    <div id="mySidebar" class="sidebar">
+        <a href="javascript:void(0)" class="closebtn" onclick="toggleSidebar()">&times;</a>
+        <a href="#"><i class="fa-solid fa-user"></i></i></a>
+        <a href="#">Everything</a>
+        <a href="#">Groceries</a>
+        <a href="#">Juice</a>
+        <a href="#">About</a>
+        <a href="#">Contact</a>
+    </div>
+
+    <section>
+        <div class="p-5 mb-4 bg-light rounded-3">
+            <div class="py-5">
+                <div class="row">
+                    <div class="col-lg-7">
+                        <img src="images/jumbotron.png" alt="product">
+                    </div>
+                    <div class="col-lg-5">
+                        <img src="images/leaf.png" alt="" class="w-auto mb-4">
+                        <h5 class="mb-3">Best Quality Products</h5>
+                        <h1 class="display-5 fw-bold mb-4">Join The Organic Movement!</h1>
+                        <p class="mb-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit
+                            tellus, luctus nec ullamcorper mattis, pulvinar dapibus
+                            leo.</p>
+                        <button class="btn" type="button"><i class="fa-solid fa-basket-shopping"></i>&nbsp;&nbsp;SHOP
+                            NOW</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="dark-section">
+        <div class="row g-4">
+            <div class="col-sm-3">
+                <div class="dark-item">
+                    <div class="row">
+                        <div class="col-lg-2 mb-sm-auto"><a href="#"><i class="fa-solid fa-truck dark-icon"></i></a>
+                        </div>
+                        <div class="col-lg-10">
+                            <h5><a href="#">Free Shipping</a></h5>
+                        </div>
+                    </div>
+                    <p>Above $5 Only</p>
+                </div>
+            </div>
+            <div class="col-sm-3">
+                <div class="dark-item">
+                    <div class="row">
+                        <div class="col-lg-2"><a href="#"><i class="fa-solid fa-address-book dark-icon"></i></a></div>
+                        <div class="col-lg-10">
+                            <h5><a href="#">Free Shipping</a></h5>
+                        </div>
+                    </div>
+                    <p>Above $5 Only</p>
+                </div>
+            </div>
+            <div class="col-sm-3">
+                <div class="dark-item">
+                    <div class="row">
+                        <div class="col-lg-2"><a href="#"><i class="fa-solid fa-money-bill dark-icon"></i></a></div>
+                        <div class="col-lg-10">
+                            <h5><a href="#">Free Shipping</a></h5>
+                        </div>
+                    </div>
+                    <p>Above $5 Only</p>
+                </div>
+            </div>
+            <div class="col-sm-3">
+                <div class="dark-item">
+                    <div class="row">
+                        <div class="col-lg-2"><a href="#"><i class="fa-solid fa-recycle dark-icon"></i></a></div>
+                        <div class="col-lg-10">
+                            <h5><a href="#">Free Shipping</a></h5>
+                        </div>
+                    </div>
+                    <p>Above $5 Only</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="products">
+        <div class="container text-center p-5 mt-5">
+            <div class="row justify-content-center">
+                <div class="col-lg-12">
+                    <h3>Best Selling Products</h3>
+                </div>
+                <div class="col-lg-12">
+                    <img src="images/leaf.png" alt="leaf" class="w-auto">
+                </div>
+            </div>
+        </div>
+        <div class="row justify-content-center m-0">
+            <div class="col-md-3">
+                <div>
+                    <img src="images/product_1.jpg" alt="" class="img-fluid">
+                    <div class="text-center product-item">
+                        <p class="text-muted mt-2">Groceries</p>
+                        <h6>Assorted Coffee</h6>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <p>&#8377;35.00</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div>
+                    <img src="images/product_2.jpg" alt="" class="img-fluid">
+                    <div class="text-center product-item">
+                        <p class="text-muted mt-2">Groceries</p>
+                        <h6>Assorted Coffee</h6>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <p>&#8377;35.00</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div>
+                    <img src="images/product_3.jpg" alt="" class="img-fluid">
+                    <div class="text-center product-item">
+                        <p class="text-muted mt-2">Groceries</p>
+                        <h6>Assorted Coffee</h6>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <p>&#8377;35.00</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div>
+                    <img src="images/product_4.jpg" alt="" class="img-fluid">
+                    <div class="text-center product-item">
+                        <p class="text-muted mt-2">Groceries</p>
+                        <h6>Assorted Coffee</h6>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <p>&#8377;35.00</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="mb-5"></div>
+    </section>
+
+    <section class="product-second">
+        <div class="row m-0">
+            <div class="col-lg-4">
+                <div class="card border-0">
+                    <div class="card-body">
+                        <h4 class="card-title">Farm Fresh Fruits</h4>
+                        <p class="card-text">Ut sollicitudin quam vel purus tempus, vel eleifend felis varius.</p>
+                        <a href="#" class="btn btn-primary">SHOP NOW &nbsp;<i class="fa-solid fa-arrow-right"></i></a>
+                        <img src="images/fruit_1.jpg" alt="">
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4">
+                <div class="card border-0">
+                    <div class="card-body">
+                        <h4 class="card-title">Farm Fresh Fruits</h4>
+                        <p>Ut sollicitudin quam vel purus tempus, vel eleifend felis varius.</p>
+                        <a href="#" class="btn btn-primary">SHOP NOW &nbsp;<i class="fa-solid fa-arrow-right"></i></a>
+                        <img class="card-custom-image " src="images/fruit_2.png" alt="">
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4">
+                <div class="card border-0">
+                    <div class="card-body ">
+                        <h4 class="card-title">Farm Fresh Fruits</h4>
+                        <p>Ut sollicitudin quam vel purus tempus, vel eleifend felis varius.</p>
+                        <a href="#" class="btn btn-primary">SHOP NOW &nbsp;<i class="fa-solid fa-arrow-right"></i></a>
+                        <img src="images/fruit_3.jpg" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="dark-product-2">
+            <div class="row m-0 p-5">
+                <div class="col-lg-9">
+                    <h1>Get 25% Off On Your First Purchase!</h1>
+                </div>
+                <div class="col-lg-3">
+                    <button class="btn" type="button"><i class="fa-solid fa-basket-shopping"></i>&nbsp;&nbsp;SHOP
+                        NOW</button>
+                </div>
+            </div>
+        </div>
+        <h5 class="text-center p-5">Try It For Free. No Registration Needed.</h5>
+    </section>
+
+    <section class="products" id="trending">
+        <div class="container text-center p-5 mt-5">
+            <div class="row justify-content-center">
+                <div class="col-lg-12">
+                    <h3>Trending Products</h3>
+                </div>
+                <div class="col-lg-12">
+                    <img src="images/leaf.png" alt="leaf" class="w-auto">
+                </div>
+            </div>
+        </div>
+        <div class="row justify-content-center m-0">
+            <div class="col-md-3">
+                <div>
+                    <img src="images/product_1.jpg" alt="" class="img-fluid">
+                    <div class="text-center product-item">
+                        <p class="text-muted mt-2">Groceries</p>
+                        <h6>Assorted Coffee</h6>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <p>&#8377;35.00</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div>
+                    <img src="images/product_5.jpg" alt="" class="img-fluid">
+                    <div class="text-center product-item">
+                        <p class="text-muted mt-2">Groceries</p>
+                        <h6>Assorted Coffee</h6>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <p>&#8377;35.00</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div>
+                    <img src="images/product_3.jpg" alt="" class="img-fluid">
+                    <div class="text-center product-item">
+                        <p class="text-muted mt-2">Groceries</p>
+                        <h6>Assorted Coffee</h6>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <p>&#8377;35.00</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div>
+                    <img src="images/product_4.jpg" alt="" class="img-fluid">
+                    <div class="text-center product-item">
+                        <p class="text-muted mt-2">Groceries</p>
+                        <h6>Assorted Coffee</h6>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <p>&#8377;35.00</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="mb-5"></div>
+    </section>
+
+    <section class="feedback" style="background-color: var(--white);">
+        <div class="container text-center p-5 mt-5">
+            <div class="row justify-content-center">
+                <div class="col-lg-12">
+                    <h3>Customers Reviews</h3>
+                </div>
+                <div class="col-lg-12">
+                    <img src="images/leaf.png" alt="leaf" class="w-auto">
+                </div>
+            </div>
+        </div>
+        <div class="row g-4 m-0 mb-5">
+            <div class="col-lg-4 ">
+                <div class="review p-4 text-center rounded-2 mt-5  py-5">
+                    <div class="review-icon mb-4">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                    </div>
+                    <p>Click edit button to change this text. Lorem ipsum dolor sit amet, consectetur adipiscing
+                        elit.
+                        Ut
+                        elit tellus, luctus
+                        nec ullamcorper mattis, pulvinar dapibus leo.</p>
+                    <div class="feedback-person">
+                        <img src="images/feedback_1.png" alt="" class="mx-3">
+                        <p>Mila Kunis</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4">
+                <div class="banner p-5">
+                    <div class="banner-text">
+                        <h1 class="mb-3 fw-bold">Deal Of The Day 15% Off On All Vegetables!</h1>
+                        <p class="mb-5 ">I am text block. Click edit button to change this tex em ips.</p>
+                        <a href="#" class="btn btn-primary ">SHOP NOW &nbsp;<i class="fa-solid fa-arrow-right"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4">
+                <div class=" review p-4 text-center rounded-2 mt-5 py-5">
+                    <div class="review-icon mb-4">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                    </div>
+                    <p>Click edit button to change this text. Lorem ipsum dolor sit amet, consectetur adipiscing
+                        elit.
+                        Ut
+                        elit tellus, luctus
+                        nec ullamcorper mattis, pulvinar dapibus leo.</p>
+                    <div class="feedback-person">
+                        <img src="images/feedback_2.png" alt="" class="mx-3">
+                        <p>Mike Sendler</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="feature">
+            <div class="row m-0 p-5">
+                <div class="col-lg-3 mt-4">
+                    <h5>Featured Brands:</h5>
+                </div>
+                <div class="col-lg-9">
+                    <img src="images/footer_credit.png" alt="" class="img-responsive">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer" style="border-bottom: 1px solid #0f212e;">
+            <div class="row m-0">
+                <div class="col-md-6">
+                    <img src="images/logo_footer.png" alt="" class="w-auto">
+                    <p>Maecenas mi justo, interdum at consectetur vel, tristique et arcu. Ut quis eros blandit, ultrices
+                        diam in, elementum ex.
+                        Suspendisse quis faucibus urna. Suspendisse pellentesque.
+                    </p>
+                </div>
+                <div class="col-md-3 p-4">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="">Shop</a></li>
+                        <li><a href="">Shop</a></li>
+                        <li><a href="">Shop</a></li>
+                        <li><a href="">Shop</a></li>
+                        <li><a href="">Shop</a></li>
+                        <li><a href="">Shop</a></li>
+                        <li><a href="">Shop</a></li>
+                        <li><a href="">Shop</a></li>
+                    </ul>
+                    <h3>Site Links</h3>
+                    <ul>
+                        <li><a href="">Shop</a></li>
+                        <li><a href="">Shop</a></li>
+                        <li><a href="">Shop</a></li>
+                        <li><a href="">Shop</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-3 p-4">
+                    <h3>Download Our Mobile App</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec aliquam gravida sollicitudin.
+                        Praesent
+                        porta enim mi, non
+                        tincidunt libero interdum sit amet.
+                    </p>
+                    <h3>QuickLinks</h3>
+                    <ul>
+                        <li><a style="color:var(--green)" href="">Know More About Us</a></li>
+                        <li><a style="color:var(--green)" href="">Know More About Us</a></li>
+                        <li><a style="color:var(--green)" href="">Know More About Us</a></li>
+                        <li><a style="color:var(--green)" href="">Know More About Us</a></li>
+                    </ul>
+                    <div class="footer-img">
+                        <div class="row">
+                            <div class="col-lg-6">
+                                <img src="images/app-store.png" alt="">
+                            </div>
+                            <div class="col-lg-6">
+                                <img src="images/play-store.png" alt="">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer-end">
+            <div class="row m-0 justify-content-between p-4">
+                <div class="col-md-auto">
+                    Copyright © 2023 | Organic Store
+                </div>
+                <div class="col-md-auto">
+                    <a href=""><i class="fa-brands fa-youtube"></i></a>
+                    <a href=""><i class="fa-brands fa-facebook"></i></a>
+                    <a href=""><i class="fa-brands fa-twitter"></i></a>
+                    <a href=""><i class="fa-brands fa-instagram"></i></a>
+                </div>
+            </div>
+        </div>
+
+    </footer>
+    <script src="main.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
