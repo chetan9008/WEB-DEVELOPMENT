@@ -1,0 +1,665 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <link rel="stylesheet" href="Netflix.css"> -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Netflix - Watch TV Shows Online</title>
+
+    <style>
+        :root {
+            --PRIMARY: #e50914;
+            --DARK: #141414;
+            --LIGHT: #f4f4f4;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial',
+                sans-serif;
+            -webkit-font-smoothing: antialiased;
+            background: #000;
+            color: #999;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        a {
+            color: #fff;
+            text-decoration: none;
+        }
+
+        h1,
+        h2,
+        h3,
+        h4 {
+            color: #fff;
+        }
+
+        p {
+            margin: 0.5rem 0;
+        }
+
+        img {
+            width: 100%;
+        }
+
+        .front {
+            width: 100%;
+            height: 96vh;
+            position: relative;
+            background: url(https://chetanwebdevelopment.000webhostapp.com/Project/Netflix/Nimg/front.jpg) no-repeat center center/cover;
+        }
+
+        .front::after {
+            content: '';
+            position: absolute;
+            z-index: 1;
+            background-color: rgba(0, 0, 0, .6);
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            box-shadow: inset 0px 50px 100px #000000, inset -0px -50px 100px #000000;
+        }
+
+        .first {
+            position: relative;
+            height: 90px;
+            z-index: 2;
+        }
+
+        .first img {
+            width: 170px;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        .first a {
+            position: absolute;
+            top: 50%;
+            right: 0;
+            transform: translate(-50%, -50%);
+        }
+
+        .second {
+            position: relative;
+            display: flex;
+            text-align: center;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            margin: auto;
+            margin-top: 6.5rem;
+            z-index: 2;
+        }
+
+        .second h1 {
+            font-weight: 700;
+            font-size: 4.2rem;
+            margin: 0 0 2rem;
+            line-height: 1.1;
+        }
+
+        .second p {
+            text-transform: uppercase;
+            font-weight: 400;
+            font-size: 1.5rem;
+            line-height: 1;
+            margin: 0 0 2rem;
+            color: var(--LIGHT);
+        }
+
+        #tab-1-content,
+        #tab-2-content,
+        #tab-3-content {
+            display: none;
+        }
+
+        .show {
+            display: block !important;
+        }
+
+        .tabs {
+            background: var(--dark-color);
+            padding-top: 1rem;
+            border-bottom: 3px solid #3d3d3d;
+            border-right: none;
+        }
+
+        .tabs .container {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-gap: 1rem;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+        }
+
+        .tabs p {
+            font-size: 1.2rem;
+            padding-top: .2rem;
+        }
+
+        .tabs .container div {
+            padding: .5rem 0;
+        }
+
+        .tabs .container div:hover {
+            color: white;
+            cursor: pointer;
+        }
+
+        .tab-border {
+            border-bottom: var(--PRIMARY) 4px solid;
+        }
+
+        .tab-content {
+            padding: 3rem 0;
+            color: #fff;
+            background: #000;
+        }
+
+        #tab-1-content .tab-1-content-inner {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            grid-gap: 2rem;
+            align-items: center;
+            justify-content: center;
+        }
+
+        #tab-2-content .tab-2-content-top {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            justify-content: center;
+            align-items: center;
+            grid-gap: 2rem;
+            text-align: center;
+        }
+
+        #tab-2-content .tab-2-content-bottom {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            justify-content: center;
+            align-items: center;
+            grid-gap: 2rem;
+            text-align: center;
+            margin-top: 2rem;
+        }
+
+        /* text utility */
+        .text-lg {
+            font-size: 1.8rem;
+            margin-bottom: 1rem;
+            color: white;
+        }
+
+        .text-xl {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+            color: white;
+        }
+
+        .text-center {
+            text-align: center;
+        }
+
+        .text-dark {
+            color: #999;
+        }
+
+        .text-md {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            color: white;
+        }
+
+        .text-sm {
+            font-size: .8rem;
+            margin-bottom: 1rem;
+        }
+
+        .tab-3-container {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            grid-gap: 2rem;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+        }
+
+        .table-container {
+            display: grid;
+            grid-template-columns: 1fr;
+        }
+
+        .table {
+            margin-top: 2rem;
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        .table thead th {
+            text-transform: uppercase;
+            padding: 0.8rem;
+        }
+
+        .table tbody tr td {
+            color: #999;
+            padding: .8rem 1.2rem;
+            text-align: center;
+        }
+
+        .table tbody tr td:first-child {
+            text-align: left;
+        }
+
+        .table tbody tr:nth-child(odd) {
+            background: #222;
+        }
+
+        /* footer  */
+
+        .footer {
+            max-width: 70%;
+            margin: 1rem auto;
+            overflow: auto;
+        }
+
+        .footer,
+        .footer a {
+            color: #999;
+            font-size: .9rem;
+        }
+
+        .footer p {
+            margin-bottom: 1.5rem;
+        }
+
+        .footer .footer-cols {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            grid-gap: 2rem;
+        }
+
+        .footer li {
+            line-height: 1.9;
+        }
+
+        /* container */
+        .container {
+            padding: 0 2rem;
+            max-width: 70%;
+            margin: auto;
+            overflow: hidden;
+
+        }
+
+        /* Buttons */
+
+        .btn {
+            display: inline-block;
+            background-color: var(--PRIMARY);
+            color: var(--LIGHT);
+            padding: 0.4rem 1.3rem;
+            font-size: 1rem;
+            text-align: center;
+            border: none;
+            cursor: pointer;
+            margin-right: 0.5rem;
+            transition: opacity .2s ease-in;
+            outline: none;
+            box-shadow: 0 1px 0 rgba(0, 0, 0, 4.5);
+            border-radius: 2px;
+        }
+
+        .btn:hover {
+            opacity: .9;
+        }
+
+        .btn-rounded {
+            border-radius: 5px;
+        }
+
+        .btn-xl {
+            padding: 1.0rem 1.5rem;
+            font-size: 1.8rem;
+            text-transform: uppercase;
+        }
+
+        .btn-lg {
+            padding: .8rem 1.3rem;
+            font-size: 1rem;
+            text-transform: uppercase;
+        }
+
+        @media(max-width:960px) {
+            .front {
+                height: 70vh;
+            }
+
+            .hide-sm {
+                display: none;
+            }
+
+            .first img {
+                top: 30%;
+                left: 5%;
+                transform: translate(0);
+            }
+
+            .second h1 {
+                font-size: 3rem;
+                line-height: 1;
+            }
+
+            .second p {
+                font-size: 1.3rem;
+            }
+
+            .tab-3-container {
+                grid-template-columns: 1fr;
+            }
+
+            .btn-xl {
+                font-size: 1.3rem;
+                padding: 1.2rem 1.8rem;
+            }
+
+            .text-xl {
+                font-size: 1.3rem;
+            }
+
+            .text-lg {
+                font-size: 1rem;
+                margin-bottom: 1rem;
+            }
+
+            .text-md {
+                font-size: .9rem;
+                margin-bottom: 1rem;
+            }
+        }
+
+        @media(max-width:700px) {
+            .second h1 {
+                font-size: 2.5rem;
+                line-height: 1;
+            }
+
+            .second p {
+                font-size: 1rem;
+            }
+
+            #tab-1-content .tab-1-content-inner {
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
+
+            #tab-2-content .tab-2-content-top {
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
+
+            #tab-2-content .tab-2-content-bottom {
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
+
+            .btn-xl {
+                font-size: 1rem;
+                padding: 1.2rem 1.6rem;
+            }
+        }
+
+        @media(max-height: 600px) {
+            .showcase-content {
+                margin-top: 3rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header class="front">
+        <div class="first">
+            <img src="    https://chetanwebdevelopment.000webhostapp.com/Project/Netflix/Nimg/logo.png" alt="netflix">
+            <a href="#" class="btn btn-rounded">Sign in</a>
+        </div>
+        <div class="second">
+            <h1>See what's next</h1>
+            <p>Watch anywhere. Cancel Anytime</p>
+            <a href="#" class="btn btn-xl">
+                Watch Free For 30 Days <i class="fas fa-chevron-right btn-icon"></i>
+            </a>
+        </div>
+    </header>
+    <section class="tabs">
+        <div class="container">
+            <div id="tab-1" class="tab-item tab-border">
+                <i class="fas fa-door-open fa-2x"></i>
+                <p class="hide-sm">Cancel at any time</p>
+            </div>
+            <div id="tab-2" class="tab-item">
+                <i class="fas fa-tablet-alt fa-2x"></i>
+                <p class="hide-sm">Watch anywhere</p>
+            </div>
+            <div id="tab-3" class="tab-item">
+                <i class="fas fa-tags fa-2x"></i>
+                <p class="hide-sm">Pick your price</p>
+            </div>
+        </div>
+    </section>
+    <section class="tab-content">
+        <div class="container">
+            <!-- first tab content -->
+            <div id="tab-1-content" class="tab-content-item show">
+                <div class="tab-1-content-inner">
+                    <div>
+                        <p class="text-lg">
+                            If you decide Netflix isn't for you - no problem. No commitment.
+                            Cancel online anytime.
+                        </p>
+                        <a href="#" class="btn btn-lg">Watch Free For 30 Days</a>
+                    </div>
+                    <img src="    https://chetanwebdevelopment.000webhostapp.com/Project/Netflix/Nimg/firstmodel.png"
+                        alt="first">
+                </div>
+            </div>
+
+            <!-- second tab content -->
+
+            <div id="tab-2-content" class="tab-content-item">
+                <div class="tab-2-content-top">
+                    <p class="text-md">
+                        Watch TV shows and movies anytime, anywhere — personalized for
+                        you.
+                    </p>
+                    <a href="#" class="btn btn-lg">Watch Free For 30 Days</a>
+                </div>
+                <div class="tab-2-content-bottom">
+                    <!-- first  -->
+                    <div>
+                        <img src="    https://chetanwebdevelopment.000webhostapp.com/Project/Netflix/Nimg/secondmodel.jpg"
+                            alt="second">
+                        <p class="text-md">
+                            Watch on your TV
+                        </p>
+                        <p class=" text-sm text-dark ">
+                            Smart TVs, PlayStation, Xbox, Chromecast, Apple TV, Blu-ray
+                            players and more.
+                        </p>
+                    </div>
+                    <!-- second  -->
+                    <div>
+                        <img src="    https://chetanwebdevelopment.000webhostapp.com/Project/Netflix/Nimg/thridmodel.png"
+                            alt="second">
+                        <p class="text-md">
+                            Watch instantly or download for later
+                        </p>
+                        <p class=" text-sm text-dark ">
+                            Available on phone and tablet, wherever you go.
+                        </p>
+                    </div>
+                    <!-- third  -->
+                    <div>
+                        <img src="    https://chetanwebdevelopment.000webhostapp.com/Project/Netflix/Nimg/forthmode.png"
+                            alt="second">
+                        <p class="text-md">
+                            Use any computer
+                        </p>
+                        <p class=" text-sm text-dark ">
+                            Watch right on Netflix.com.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- thrid content  -->
+
+            <div id="tab-3-content" class="tab-content-item">
+                <div class="tab-3-container">
+                    <p class="text-lg">
+                        Choose one plan and watch everything on Netflix.
+                    </p>
+                    <a href="#" class="btn btn-lg">Watch Free For 30 Days</a>
+                </div>
+                <div class="table-container">
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th></th>
+                                <th>Basic</th>
+                                <th>Standard</th>
+                                <th>Premium</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Monthly price after free month ends on 6/19/19</td>
+                                <td>$8.99</td>
+                                <td>$12.99</td>
+                                <td>$15.99</td>
+                            </tr>
+                            <tr>
+                                <td>HD Available</td>
+                                <td><i class="fas fa-times"></i></td>
+                                <td><i class="fas fa-check"></i></td>
+                                <td><i class="fas fa-check"></i></td>
+                            </tr>
+                            <tr>
+                                <td>Ultra HD Available</td>
+                                <td><i class="fas fa-times"></i></td>
+                                <td><i class="fas fa-times"></i></td>
+                                <td><i class="fas fa-check"></i></td>
+                            </tr>
+                            <tr>
+                                <td>Screens you can watch on at the same time</td>
+                                <td>1</td>
+                                <td>2</td>
+                                <td>4</td>
+                            </tr>
+                            <tr>
+                                <td>Watch on your laptop, TV, phone and tablet</td>
+                                <td><i class="fas fa-check"></i></td>
+                                <td><i class="fas fa-check"></i></td>
+                                <td><i class="fas fa-check"></i></td>
+                            </tr>
+                            <tr>
+                                <td>Unlimited movies and TV shows</td>
+                                <td><i class="fas fa-check"></i></td>
+                                <td><i class="fas fa-check"></i></td>
+                                <td><i class="fas fa-check"></i></td>
+                            </tr>
+                            <tr>
+                                <td>Cancel anytime</td>
+                                <td><i class="fas fa-check"></i></td>
+                                <td><i class="fas fa-check"></i></td>
+                                <td><i class="fas fa-check"></i></td>
+                            </tr>
+                            <tr>
+                                <td>First month free</td>
+                                <td><i class="fas fa-check"></i></td>
+                                <td><i class="fas fa-check"></i></td>
+                                <td><i class="fas fa-check"></i></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer class="footer">
+        <p>Questions? Call 1-866-579-7172</p>
+        <div class="footer-cols">
+            <ul>
+                <li><a href="#">FAQ</a></li>
+                <li><a href="#">Investor Relations</a></li>
+                <li><a href="#">Ways To Watch</a></li>
+                <li><a href="#">Corporate Information</a></li>
+                <li><a href="#">Netflix Originals</a></li>
+            </ul>
+            <ul>
+                <li><a href="#">Help Center</a></li>
+                <li><a href="#">Jobs</a></li>
+                <li><a href="#">Terms Of Use</a></li>
+                <li><a href="#">Contact Us</a></li>
+            </ul>
+            <ul>
+                <li><a href="#">Account</a></li>
+                <li><a href="#">Redeem Gift Cards</a></li>
+                <li><a href="#">Privacy</a></li>
+                <li><a href="#">Speed Test</a></li>
+            </ul>
+            <ul>
+                <li><a href="#">Media Center</a></li>
+                <li><a href="#">Buy Gift Cards</a></li>
+                <li><a href="#">Cookie Preferences</a></li>
+                <li><a href="#">Legal Notices</a></li>
+            </ul>
+        </div>
+    </footer>
+</body>
+<script>
+    //create a array of tabItem and tabContent
+    const tabItem = document.querySelectorAll('.tab-item');
+    const tabContent = document.querySelectorAll('.tab-content-item');
+    //remove and add border and content on click
+    function selectItem() {
+        removeBorder();
+        removeShow();
+
+        this.classList.add("tab-border");
+        const tabContentItem = document.getElementById(`${this.id}-content`);
+        tabContentItem.classList.add('show');
+    }
+    function removeBorder() {
+        tabItem.forEach(item => {
+            item.classList.remove("tab-border");
+        })
+    }
+    function removeShow() {
+        tabContent.forEach(e => {
+            e.classList.remove("show");
+        })
+    }
+    tabItem.forEach(item => {
+        item.addEventListener('click', selectItem);
+    });
+</script>
+
+
+</html>
