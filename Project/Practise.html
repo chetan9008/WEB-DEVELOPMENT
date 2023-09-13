@@ -1,34 +1,507 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sample HTML Email</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- links  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/line-awesome/1.3.0/line-awesome/css/line-awesome.min.css"
+        integrity="sha512-vebUliqxrVkBy3gucMhClmyQP9On/HAWQdKDXRaAlb/FKuTbxkjPKUyqVOxAcGwFDka79eTF+YXwfke1h3/wfg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <title>Chetan Web Developer</title>
 </head>
-<body style="font-family: Arial, sans-serif; background-color: #f0f0f0; margin: 0; padding: 0;">
-    <table role="presentation" cellspacing="0" cellpadding="0" border="0" align="center" width="600" style="margin: auto; background-color: #ffffff;">
-        <!-- Header -->
-        <tr>
-            <td style="padding: 20px 0; text-align: center; background-color: #007bff;">
-                <h1 style="color: #ffffff;">Sample HTML Email</h1>
-            </td>
-        </tr>
-        <!-- Content -->
-        <tr>
-            <td style="padding: 20px;">
-                <p>Hello,</p>
-                <p>This is a sample HTML email. You can customize the content here.</p>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                <p>Regards,</p>
-                <p>Your Name</p>
-            </td>
-        </tr>
-        <!-- Footer -->
-        <tr>
-            <td style="padding: 20px; text-align: center; background-color: #007bff; color: #ffffff;">
-                <p>&copy; 2023 Your Company</p>
-            </td>
-        </tr>
-    </table>
+
+<body data-bs-spy="scroll" data-bs-target=".navbar">
+
+    <!-- NAVBAR  -->
+    <nav class="navbar  navbar-expand-lg navbar-dark fixed-top">
+        <div class="container flex-lg-column">
+            <a class="navbar-brand mx-lg-auto mb-lg-4 " href="#">
+                <span class="h3 fw-bold d-block d-lg-none ">Jon Carter</span>
+                <img src="images/person.jpg" class="d-none d-lg-block rounded-circle" alt="">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-togglericon">
+                    <!-- <i class="las la-bars"></i> -->
+                    <nav class="navbar-custom">
+                        <div class="navbar-toggler-custom" onclick="toggleNavbar()">
+                            <i class="fa fa-bars" id="toggler-icon"></i>
+                        </div>
+                        <!-- Other navigation items go here -->
+                    </nav>
+                </span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto flex-lg-column text-lg-center text-uppercase">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#home">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#services">Services</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#work">Work</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#about">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#reviews">Reviews</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#blog">Blog</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contact">Contact</a>
+                    </li>
+
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!-- //NAVBAR  -->
+
+    <div id="content">
+
+        <!-- HOME -->
+        <section id="home" class="full-height px-lg-5">
+
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-10">
+                        <h1 class="display-4 fw-bold" data-aos="fade-up">I'M A <span class="text-brand">
+                                WEB DEVELOPER</span> FROM INDIA</h1>
+                        <p class="lead mt-2 mb-4" data-aos="fade-up" data-aos-delay="300">I am Chetan, And I craft
+                            high-performing and delightful experiences tailored and conversion-focused</p>
+                        <div data-aos="fade-up" data-aos-delay="600">
+                            <a href="#work" class="btn btn-brand me-3">Explore My Work</a>
+                            <a href="#" class="link-custom">Call: (233) 3454 2342</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+        <!-- //HOME -->
+
+        <!-- SERVICES -->
+        <section id="services" class="full-height px-lg-5">
+            <div class="container">
+
+                <div class="row pb-4" data-aos="fade-up">
+                    <div class="col-lg-8">
+                        <h6 class="text-brand">SERVICES</h6>
+                        <h1>Services That I Provide</h1>
+                    </div>
+                </div>
+
+                <div class="row gy-4">
+
+                    <div class="col-md-4" data-aos="fade-up">
+                        <div class="service p-4 bg-base rounded-4 shadow-effect">
+                            <div class="iconbox rounded-4">
+                                <i class="las la-feather"></i>
+                            </div>
+                            <h5 class="mt-4 mb-2">UX Design</h5>
+                            <p>I craft high-performing and delightful experiences tailored and conversion-focused</p>
+                            <a href="#" class="link-custom">Read More</a>
+                        </div>
+                    </div>
+
+                    <div class="col-md-4" data-aos="fade-up" data-aos-delay="300">
+                        <div class="service p-4 bg-base rounded-4 shadow-effect">
+                            <div class="iconbox rounded-4">
+                                <i class="las la-pencil-ruler"></i>
+                            </div>
+                            <h5 class="mt-4 mb-2">Branding</h5>
+                            <p>I craft high-performing and delightful experiences tailored and conversion-focused</p>
+                            <a href="#" class="link-custom">Read More</a>
+                        </div>
+                    </div>
+
+                    <div class="col-md-4" data-aos="fade-up" data-aos-delay="600">
+                        <div class="service p-4 bg-base rounded-4 shadow-effect">
+                            <div class="iconbox rounded-4">
+                                <i class="las la-laptop-code"></i>
+                            </div>
+                            <h5 class="mt-4 mb-2">Web Designing</h5>
+                            <p>I craft high-performing and delightful experiences tailored and conversion-focused</p>
+                            <a href="#" class="link-custom">Read More</a>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </section>
+        <!-- SERVICES -->
+
+        <!-- WORK -->
+        <section id="work" class="full-height px-lg-5">
+            <div class="container">
+
+                <div class="row pb-4" data-aos="fade-up">
+                    <div class="col-lg-8">
+                        <h6 class="text-brand">WORK</h6>
+                        <h1>My Recent Projects</h1>
+                    </div>
+                </div>
+
+                <div class="row gy-4">
+
+                    <div class="col-md-6" data-aos="fade-up">
+                        <div class="card-custom rounded-4 bg-base shadow-effect">
+                            <div class="card-custom-image rounded-4">
+                                <img class="rounded-4 img-thumbnail" src="images/project-1.jpg" alt="">
+                            </div>
+                            <div class="card-custom-content p-4">
+                                <h4>Startup Landing Page</h4>
+                                <p>Innovation that exceeds expectations. Astra is a true template equiqed with all the
+                                    elements you could ever need to put together</p>
+                                <a href="#" class="link-custom">Read More</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6" data-aos="fade-up" data-aos-delay="300">
+                        <div class="card-custom rounded-4 bg-base shadow-effect">
+                            <div class="card-custom-image rounded-4">
+                                <img class="rounded-4 img-thumbnail" src="images/project-2.png" alt="">
+                            </div>
+                            <div class="card-custom-content p-4">
+                                <h4>Startup Landing Page</h4>
+                                <p>Innovation that exceeds expectations. Astra is a true template equiqed with all the
+                                    elements you could ever need to put together</p>
+                                <a href="#" class="link-custom">Read More</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6" data-aos="fade-up">
+                        <div class="card-custom rounded-4 bg-base shadow-effect">
+                            <div class="card-custom-image rounded-4">
+                                <img class="rounded-4 img-thumbnail" src="images/project-3.png" alt="">
+                            </div>
+                            <div class="card-custom-content p-4">
+                                <h4>Startup Landing Page</h4>
+                                <p>Innovation that exceeds expectations. Astra is a true template equiqed with all the
+                                    elements you could ever need to put together</p>
+                                <a href="#" class="link-custom">Read More</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6" data-aos="fade-up" data-aos-delay="300">
+                        <div class="card-custom rounded-4 bg-base shadow-effect">
+                            <div class="card-custom-image rounded-4">
+                                <img class="rounded-4 img-thumbnail" src="images/project-4.png" alt="">
+                            </div>
+                            <div class="card-custom-content p-4">
+                                <h4>Startup Landing Page</h4>
+                                <p>Innovation that exceeds expectations. Astra is a true template equiqed with all the
+                                    elements you could ever need to put together</p>
+                                <a href="#" class="link-custom">Read More</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+        <!-- //WORK -->
+
+        <!-- ABOUT -->
+        <section id="about" class="full-height px-lg-5">
+            <div class="container">
+
+                <div class="row pb-4" data-aos="fade-up">
+                    <div class="col-lg-8">
+                        <h6 class="text-brand">ABOUT</h6>
+                        <h1>My Education & Experiance</h1>
+                    </div>
+                </div>
+
+                <div class="row gy-5">
+                    <div class="col-lg-6">
+
+                        <h3 class="mb-4" data-aos="fade-right" data-aos-delay="100">Education</h3>
+                        <div class="row gy-4">
+
+                            <div class="col-12" data-aos="fade-right" data-aos-delay="200">
+                                <div class="bg-base p-4 rounded-4 shadow-effect">
+                                    <h4>Master of Software Engineering</h4>
+                                    <p class="text-brand mb-2">De Mars University Venston Bay (2015 - 2020)</p>
+                                    <p class="mb-0">All we are more and design lorem ipsum dolor creativity sit amet
+                                        consectetur adipisicing elit</p>
+                                </div>
+                            </div>
+
+                            <div class="col-12" data-aos="fade-right" data-aos-delay="400">
+                                <div class="bg-base p-4 rounded-4 shadow-effect">
+                                    <h4>Master of Software Engineering</h4>
+                                    <p class="text-brand mb-2">De Mars University Venston Bay (2015 - 2020)</p>
+                                    <p class="mb-0">All we are more and design lorem ipsum dolor creativity sit amet
+                                        consectetur adipisicing elit</p>
+                                </div>
+                            </div>
+
+                            <div class="col-12" data-aos="fade-right" data-aos-delay="600">
+                                <div class="bg-base p-4 rounded-4 shadow-effect">
+                                    <h4>Master of Software Engineering</h4>
+                                    <p class="text-brand mb-2">De Mars University Venston Bay (2015 - 2020)</p>
+                                    <p class="mb-0">All we are more and design lorem ipsum dolor creativity sit amet
+                                        consectetur adipisicing elit</p>
+                                </div>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                    <div class="col-lg-6">
+
+                        <h3 class="mb-4" data-aos="fade-right" data-aos-delay="100">Experiance</h3>
+                        <div class="row gy-4">
+
+                            <div class="col-12" data-aos="fade-right" data-aos-delay="200">
+                                <div class="bg-base p-4 rounded-4 shadow-effect">
+                                    <h4>Applications developer</h4>
+                                    <p class="text-brand mb-2">Twitter (2018 - 2020)</p>
+                                    <p class="mb-0">All we are more and design lorem ipsum dolor creativity sit amet
+                                        consectetur adipisicing elit</p>
+                                </div>
+                            </div>
+
+                            <div class="col-12" data-aos="fade-right" data-aos-delay="400">
+                                <div class="bg-base p-4 rounded-4 shadow-effect">
+                                    <h4>Applications developer</h4>
+                                    <p class="text-brand mb-2">Twitter (2018 - 2020)</p>
+                                    <p class="mb-0">All we are more and design lorem ipsum dolor creativity sit amet
+                                        consectetur adipisicing elit</p>
+                                </div>
+                            </div>
+
+                            <div class="col-12" data-aos="fade-right" data-aos-delay="600">
+                                <div class="bg-base p-4 rounded-4 shadow-effect">
+                                    <h4>Applications developer</h4>
+                                    <p class="text-brand mb-2">Twitter (2018 - 2020)</p>
+                                    <p class="mb-0">All we are more and design lorem ipsum dolor creativity sit amet
+                                        consectetur adipisicing elit</p>
+                                </div>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+        </section>
+        <!-- //ABOUT -->
+
+        <!-- REVIEWS -->
+        <section id="reviews" class="full-height px-lg-5">
+            <div class="container">
+
+                <div class="row pb-4" data-aos="fade-up">
+                    <div class="col-lg-8">
+                        <h6 class="text-brand">REVIEWS</h6>
+                        <h1>What our subscribers say</h1>
+                    </div>
+                </div>
+
+                <div class="row gy-4">
+
+                    <div class="col-md-4" data-aos="fade-up" data-aos-delay="200">
+
+                        <div class="review shadow-effect bg-base p-4 rounded-4">
+                            <div class="text-brand h5">
+                                <i class="las la-star"></i>
+                                <i class="las la-star"></i>
+                                <i class="las la-star"></i>
+                                <i class="las la-star"></i>
+                                <i class="las la-star"></i>
+                            </div>
+                            <p class="my-3">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Vel quae facilis
+                                fugiat molestias ab illum excepturi, qui optio modi asperiores, delectus maiores!</p>
+                            <div class="person">
+                                <h5 class="mb-0">Jon Doe</h5>
+                                <p class="mb-0">Twitter</p>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div class="col-md-4" data-aos="fade-up" data-aos-delay="400">
+
+                        <div class="review shadow-effect bg-base p-4 rounded-4">
+                            <div class="text-brand h5">
+                                <i class="las la-star"></i>
+                                <i class="las la-star"></i>
+                                <i class="las la-star"></i>
+                                <i class="las la-star"></i>
+                                <i class="las la-star"></i>
+                            </div>
+                            <p class="my-3">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Vel quae facilis
+                                fugiat molestias ab illum excepturi, qui optio modi asperiores, delectus maiores!</p>
+                            <div class="person">
+                                <h5 class="mb-0">Jon Doe</h5>
+                                <p class="mb-0">Twitter</p>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div class="col-md-4" data-aos="fade-up" data-aos-delay="600">
+
+                        <div class="review shadow-effect bg-base p-4 rounded-4">
+                            <div class="text-brand h5">
+                                <i class="las la-star"></i>
+                                <i class="las la-star"></i>
+                                <i class="las la-star"></i>
+                                <i class="las la-star"></i>
+                                <i class="las la-star"></i>
+                            </div>
+                            <p class="my-3">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Vel quae facilis
+                                fugiat molestias ab illum excepturi, qui optio modi asperiores, delectus maiores!</p>
+                            <div class="person">
+                                <h5 class="mb-0">Jon Doe</h5>
+                                <p class="mb-0">Twitter</p>
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+        </section>
+        <!-- //REVIEWS -->
+        <!-- BLOG  -->
+        <section id="blog" class="full-height px-lg-5">
+            <div class="container">
+
+                <div class="row pb-4" data-aos="zoom-in-up">
+                    <div class="col-lg-8">
+                        <h6 class="text-brand">BLOG</h6>
+                        <h1>My BLog Posts</h1>
+                    </div>
+                </div>
+
+                <div class="row gy-4">
+                    <div class="col-lg-4" data-aos="zoom-in-up" data-aos-delay="200">
+                        <div class="card-custom  bg-base shadow-effect rounded-4">
+                            <div class="card-custom-image">
+                                <img src="images/blog-post-1.jpg" alt="blog 1">
+                            </div>
+                            <div class="p-4">
+                                <p class="text-brand ">20 Dec, 2022</p>
+                                <h5>Design a creative landing page using Bootstrap 5</h5>
+                                <a href="#" class="link-custom">Read More</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4" data-aos="zoom-in-up" data-aos-delay="400">
+                        <div class="card-custom  bg-base shadow-effect rounded-4">
+                            <div class="card-custom-image">
+                                <img src="images/blog-post-2.jpg" alt="blog 2">
+                            </div>
+                            <div class="p-4">
+                                <p class="text-brand ">20 Dec, 2022</p>
+                                <h5>Design a creative landing page using Bootstrap 5</h5>
+                                <a href="#" class="link-custom">Read More</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4" data-aos="zoom-in-up" data-aos-delay="600">
+                        <div class="card-custom  bg-base shadow-effect rounded-4">
+                            <div class="card-custom-image">
+                                <img src="images/blog-post-3.jpg" alt="blog 3">
+                            </div>
+                            <div class="p-4">
+                                <p class="text-brand ">20 Dec, 2022</p>
+                                <h5>Design a creative landing page using Bootstrap 5</h5>
+                                <a href="#" class="link-custom">Read More</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+        <!-- BLOG  -->
+        <!-- CONTACT  -->
+        <section id="contact" class="full-height px-lg-5">
+            <div class="container">
+
+                <div class="row  justify-content-center text-center" data-aos="fade-up" data-aos-delay="200">
+                    <div class="col-lg-8 mb-4">
+                        <h6 class="text-brand">CONTACT</h6>
+                        <h1>Interested in working together? Let's talk</h1>
+                    </div>
+                    <div class="col-lg-8" data-aos="flip-up" data-aos-delay="400">
+                        <form action="#" class="row g-lg-3 gy-4">
+                            <div class="form-group col-lg-6">
+                                <input type="text" class="form-control" placeholder="Enter your name">
+                            </div>
+                            <div class="form-group col-lg-6">
+                                <input type="email" class="form-control" placeholder="Enter your email">
+                            </div>
+                            <div class="form-group col-lg-12">
+                                <input type="text" class="form-control" placeholder="Enter subject">
+                            </div>
+                            <div class="form-group col-lg-12">
+                                <textarea style="resize:none" name="message" rows="5" class="form-control"
+                                    placeholder="Enter your message"></textarea>
+                            </div>
+                            <div class="form-group col-lg-12 d-grid">
+                                <button class="btn btn-brand">Contact Me</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+        <!-- FOTTER  -->
+        <footer class="py-4 px-lg-5">
+            <div class="container">
+                <div class="row justify-content-between ">
+                    <div class="col-auto">
+                        <a href="">
+                            <p class="link-custom">Inspired by SA7MAN</p>
+                        </a>
+                    </div>
+                    <div class="col-auto" id="icons">
+                        <a href="#"><i class="lab la-twitter"></i></a>
+                        <a href="#"><i class="lab la-instagram"></i></a>
+                        <a href="#"><i class="lab la-github"></i></a>
+                        <a href="#"><i class="lab la-linkedin"></i></a>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <!-- FOTTER -->
+        <!-- CONTACT  -->
+    </div>
+    <!-- //CONTENT  -->
+    <!-- extentions  -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
+        crossorigin="anonymous"></script>
+    <script src="main.js"></script>
+
 </body>
+
 </html>
